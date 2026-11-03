@@ -1,0 +1,12 @@
+/* Merge into the board DTB before starting MRI runtime. 1GiB DDR board only. */
+/ {
+    reserved-memory {
+        #address-cells = <1>;
+        #size-cells = <1>;
+        ranges;
+        mri-buffer@38000000 {
+            reg = <0x38000000 0x08000000>;
+            no-map;
+        };
+    };
+};

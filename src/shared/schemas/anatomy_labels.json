@@ -1,0 +1,139 @@
+{
+  "representation": {
+    "segmentation": "official FastSurfer v2.4.2 FastSurferVINN fixed checkpoints",
+    "input": "original SUBJ_111 1mm average, validated native orientation, no MNI registration",
+    "space": "individual conformed scanner space; physical voxel volume from affine determinant",
+    "volume_method": "hard segmentation voxel count multiplied by physical voxel volume",
+    "transform": "natural log of positive volume in cubic millimeters",
+    "feature_names": [
+      "log_left_hippocampus_mm3",
+      "log_right_hippocampus_mm3",
+      "log_left_entorhinal_mm3",
+      "log_right_entorhinal_mm3",
+      "log_left_inferiortemporal_mm3",
+      "log_right_inferiortemporal_mm3",
+      "log_bilateral_lateral_ventricles_including_inferior_horns_mm3",
+      "log_total_parenchyma_mm3"
+    ],
+    "roi_labels": [
+      [
+        17
+      ],
+      [
+        53
+      ],
+      [
+        1006
+      ],
+      [
+        2006
+      ],
+      [
+        1009
+      ],
+      [
+        2009
+      ],
+      [
+        4,
+        5,
+        43,
+        44
+      ]
+    ],
+    "parenchyma_subcortical_labels": [
+      2,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      16,
+      17,
+      18,
+      26,
+      28,
+      41,
+      46,
+      47,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      58,
+      60,
+      77,
+      85
+    ],
+    "parenchyma_cortical_label_ranges": [
+      [
+        1000,
+        1999
+      ],
+      [
+        2000,
+        2999
+      ]
+    ],
+    "brain_volume_role": "measured tissue-volume covariate; NOT intracranial volume or ICV correction",
+    "cortical_thickness": false,
+    "partial_volume_corrected": false,
+    "clinical_covariates": [],
+    "local_trainable_parameters": 9
+  },
+  "quality_control": {
+    "minimum_complete_subjects": 198,
+    "missing_features_or_exclusions_allowed": false,
+    "diagnosis_or_prediction_based_repairs": false,
+    "required": [
+      "matching original identity",
+      "finite integer labels",
+      "valid matched image geometry",
+      "positive target volumes",
+      "left-right centroid ordering",
+      "visual review of every subject"
+    ],
+    "review_flag_volume_bounds_mm3": [
+      [
+        500,
+        10000
+      ],
+      [
+        500,
+        10000
+      ],
+      [
+        100,
+        15000
+      ],
+      [
+        100,
+        15000
+      ],
+      [
+        1000,
+        35000
+      ],
+      [
+        1000,
+        35000
+      ],
+      [
+        200,
+        250000
+      ],
+      [
+        400000,
+        2000000
+      ]
+    ],
+    "review_flag_pair_volume_ratio_bounds": [
+      0.25,
+      4.0
+    ],
+    "flag_policy": "Inspect images without labels; flags are not exclusions. Genuine extraction failures block fitting until repaired under one common technical policy."
+  }
+}

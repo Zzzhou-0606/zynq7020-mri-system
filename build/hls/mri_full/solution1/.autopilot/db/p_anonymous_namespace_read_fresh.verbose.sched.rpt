@@ -1,0 +1,504 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_read_fresh'
+================================================================
+* Date:           Sun Nov  1 11:06:35 2026
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        hls_full_r5
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  5.867 ns|     0.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                       |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-----------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_98_1      |        ?|        ?|         ?|          -|          -|        ?|        no|
+        | + VITIS_LOOP_102_2    |        ?|        ?|         ?|          -|          -|  0 ~ 511|        no|
+        |  ++ VITIS_LOOP_106_3  |        ?|        ?|         3|          1|          1|        ?|       yes|
+        +-----------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 28
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 25 26 27 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 2 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 28 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 28 26 
+26 --> 27 
+27 --> 25 
+28 --> 11 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.93>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%oh_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %oh"   --->   Operation 29 'read' 'oh_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%pad_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %pad"   --->   Operation 30 'read' 'pad_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%stride_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %stride"   --->   Operation 31 'read' 'stride_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%keep_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %keep"   --->   Operation 32 'read' 'keep_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%ph_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %ph"   --->   Operation 33 'read' 'ph_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%rw_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %rw"   --->   Operation 34 'read' 'rw_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%h_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %h"   --->   Operation 35 'read' 'h_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%ci_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %ci"   --->   Operation 36 'read' 'ci_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%input_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %input_r"   --->   Operation 37 'read' 'input_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%f_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %f"   --->   Operation 38 'read' 'f_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %feature_read, void @empty_5, i32 0, i32 0, void @empty_62, i32 0, i32 3211264, void @empty_2, void @empty_60, void @empty_62, i32 4, i32 16, i32 64, i32 16, void @empty_62, void @empty_62"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %fresh_words, void @empty_65, i32 0, i32 0, void @empty_62, i32 0, i32 0, void @empty_62, void @empty_62, void @empty_62, i32 0, i32 0, i32 0, i32 0, void @empty_62, void @empty_62"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i10 %ci_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (2.93ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i10P0A, i10 %ci_out, i10 %ci_read"   --->   Operation 42 'write' 'write_ln0' <Predicate = true> <Delay = 2.93> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 10> <Depth = 2> <FIFO>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %h_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (2.93ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i16P0A, i16 %h_out, i16 %h_read"   --->   Operation 44 'write' 'write_ln0' <Predicate = true> <Delay = 2.93> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %rw_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (2.93ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i16P0A, i16 %rw_out, i16 %rw_read"   --->   Operation 46 'write' 'write_ln0' <Predicate = true> <Delay = 2.93> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %ph_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 47 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (2.93ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i4P0A, i4 %ph_out, i4 %ph_read"   --->   Operation 48 'write' 'write_ln0' <Predicate = true> <Delay = 2.93> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 4> <Depth = 2> <FIFO>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %keep_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (2.93ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i4P0A, i4 %keep_out, i4 %keep_read"   --->   Operation 50 'write' 'write_ln0' <Predicate = true> <Delay = 2.93> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 4> <Depth = 2> <FIFO>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %stride_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 51 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (2.93ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i2P0A, i2 %stride_out, i2 %stride_read"   --->   Operation 52 'write' 'write_ln0' <Predicate = true> <Delay = 2.93> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 2> <FIFO>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %pad_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (2.93ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i2P0A, i2 %pad_out, i2 %pad_read"   --->   Operation 54 'write' 'write_ln0' <Predicate = true> <Delay = 2.93> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 2> <FIFO>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %oh_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (2.93ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i16P0A, i16 %oh_out, i16 %oh_read"   --->   Operation 56 'write' 'write_ln0' <Predicate = true> <Delay = 2.93> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%pad_cast7_i = zext i2 %pad_read"   --->   Operation 57 'zext' 'pad_cast7_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%stride_cast6_i = zext i2 %stride_read"   --->   Operation 58 'zext' 'stride_cast6_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%ph_cast5_i = zext i4 %ph_read"   --->   Operation 59 'zext' 'ph_cast5_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%ci_cast = zext i10 %ci_read"   --->   Operation 60 'zext' 'ci_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%pad_cast_i = zext i2 %pad_read"   --->   Operation 61 'zext' 'pad_cast_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i64 %fresh_words, i64 666, i64 8, i64 18446744073709551615"   --->   Operation 62 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %fresh_words, void @empty_65, i32 0, i32 0, void @empty_62, i32 0, i32 0, void @empty_62, void @empty_62, void @empty_62, i32 0, i32 0, i32 0, i32 0, void @empty_62, void @empty_62"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %feature_read, void @empty_5, i32 0, i32 0, void @empty_62, i32 0, i32 3211264, void @empty_2, void @empty_60, void @empty_62, i32 4, i32 16, i32 64, i32 16, void @empty_62, void @empty_62"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%ph_cast_i = zext i4 %ph_read"   --->   Operation 65 'zext' 'ph_cast_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%h_cast4_i = zext i16 %h_read"   --->   Operation 66 'zext' 'h_cast4_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%h_cast_i = zext i16 %h_read"   --->   Operation 67 'zext' 'h_cast_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%conv22_cast_i = sext i4 %keep_read"   --->   Operation 68 'sext' 'conv22_cast_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%conv22_cast_cast_i_cast_cast_cast_cast = zext i16 %conv22_cast_i"   --->   Operation 69 'zext' 'conv22_cast_cast_i_cast_cast_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%shr_i = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %input_read, i32 2, i32 31"   --->   Operation 70 'partselect' 'shr_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%shr_i_cast = zext i30 %shr_i"   --->   Operation 71 'zext' 'shr_i_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%conv45_i = zext i16 %rw_read"   --->   Operation 72 'zext' 'conv45_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.96ns)   --->   "%tobool20_not_i = icmp_eq  i4 %keep_read, i4 0"   --->   Operation 73 'icmp' 'tobool20_not_i' <Predicate = true> <Delay = 0.96> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 74 [1/1] (0.63ns)   --->   "%sub_ln98 = sub i3 0, i3 %pad_cast_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 74 'sub' 'sub_ln98' <Predicate = true> <Delay = 0.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%sext_ln98 = sext i3 %sub_ln98" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 75 'sext' 'sext_ln98' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i3 @_ssdm_op_BitConcatenate.i3.i2.i1, i2 %stride_read, i1 0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 76 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln98 = zext i3 %shl_ln" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 77 'zext' 'zext_ln98' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (1.41ns)   --->   "%add_ln102 = add i11 %ci_cast, i11 3" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 78 'add' 'add_ln102' <Predicate = true> <Delay = 1.41> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%tmp = partselect i9 @_ssdm_op_PartSelect.i9.i11.i32.i32, i11 %add_ln102, i32 2, i32 10" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 79 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%zext_ln102 = zext i9 %tmp" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 80 'zext' 'zext_ln102' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (1.29ns)   --->   "%br_ln98 = br void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 81 'br' 'br_ln98' <Predicate = true> <Delay = 1.29>
+
+State 2 <SV = 1> <Delay = 2.13>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%indvars_iv_i = phi i16 %indvars_iv_next_i, void %._crit_edge9.loopexit.i, i16 %sext_ln98, void %entry" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 82 'phi' 'indvars_iv_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%yb = phi i16 %yb_2, void %._crit_edge9.loopexit.i, i16 0, void %entry"   --->   Operation 83 'phi' 'yb' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (2.13ns)   --->   "%icmp_ln98 = icmp_ult  i16 %yb, i16 %oh_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 84 'icmp' 'icmp_ln98' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%br_ln98 = br i1 %icmp_ln98, void %.exit, void %.split7.i_ifconv" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 85 'br' 'br_ln98' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 86 [3/3] (0.98ns) (grouped into DSP with root node y0)   --->   "%mul_ln99 = mul i16 %yb, i16 %stride_cast6_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 86 'mul' 'mul_ln99' <Predicate = (icmp_ln98)> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 87 'ret' 'ret_ln0' <Predicate = (!icmp_ln98)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.98>
+ST_3 : Operation 88 [2/3] (0.98ns) (grouped into DSP with root node y0)   --->   "%mul_ln99 = mul i16 %yb, i16 %stride_cast6_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 88 'mul' 'mul_ln99' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 1.76>
+ST_4 : Operation 89 [1/3] (0.00ns) (grouped into DSP with root node y0)   --->   "%mul_ln99 = mul i16 %yb, i16 %stride_cast6_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 89 'mul' 'mul_ln99' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 90 [2/2] (1.76ns) (root node of the DSP)   --->   "%y0 = sub i16 %mul_ln99, i16 %pad_cast7_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 90 'sub' 'y0' <Predicate = true> <Delay = 1.76> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 5.41>
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%sext_ln98_1 = sext i16 %indvars_iv_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 91 'sext' 'sext_ln98_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 92 [1/1] (1.54ns)   --->   "%add_ln98 = add i17 %sext_ln98_1, i17 %ph_cast_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 92 'add' 'add_ln98' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 93 [1/1] (1.54ns)   --->   "%add_ln98_1 = add i16 %indvars_iv_i, i16 %ph_cast5_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 93 'add' 'add_ln98_1' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 94 [1/1] (2.11ns)   --->   "%empty = icmp_sgt  i17 %h_cast_i, i17 %add_ln98" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 94 'icmp' 'empty' <Predicate = true> <Delay = 2.11> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 95 [1/1] (0.00ns) (grouped into LUT with out node empty_387)   --->   "%p_v_i = select i1 %empty, i16 %add_ln98_1, i16 %h_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 95 'select' 'p_v_i' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 96 [1/1] (0.83ns) (out node of the LUT)   --->   "%empty_387 = xor i16 %p_v_i, i16 65535" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 96 'xor' 'empty_387' <Predicate = true> <Delay = 0.83> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 97 [1/2] (1.76ns) (root node of the DSP)   --->   "%y0 = sub i16 %mul_ln99, i16 %pad_cast7_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 97 'sub' 'y0' <Predicate = true> <Delay = 1.76> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 98 [1/1] (0.00ns)   --->   "%trunc_ln99 = trunc i16 %y0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 98 'trunc' 'trunc_ln99' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 99 [1/1] (0.00ns)   --->   "%sext_ln99 = sext i16 %y0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 99 'sext' 'sext_ln99' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%sext_ln99_1 = sext i16 %y0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 100 'sext' 'sext_ln99_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_23 = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %y0, i32 15" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 101 'bitselect' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 102 [1/1] (0.60ns)   --->   "%begin = select i1 %tmp_23, i15 0, i15 %trunc_ln99" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 102 'select' 'begin' <Predicate = true> <Delay = 0.60> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 103 [1/1] (1.54ns)   --->   "%add_ln99 = add i17 %sext_ln99_1, i17 %ph_cast_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 103 'add' 'add_ln99' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 104 [1/1] (2.11ns)   --->   "%icmp_ln99 = icmp_sgt  i17 %add_ln99, i17 %h_cast_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 104 'icmp' 'icmp_ln99' <Predicate = true> <Delay = 2.11> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 105 [1/1] (1.54ns)   --->   "%add_ln99_1 = add i16 %y0, i16 %ph_cast5_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 105 'add' 'add_ln99_1' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 106 [1/1] (2.13ns)   --->   "%icmp_ln100 = icmp_eq  i16 %yb, i16 0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:100]   --->   Operation 106 'icmp' 'icmp_ln100' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 107 [1/1] (0.00ns)   --->   "%zext_ln100_1 = zext i15 %begin" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:100]   --->   Operation 107 'zext' 'zext_ln100_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 108 [1/1] (1.54ns)   --->   "%add_ln100 = add i18 %sext_ln99, i18 %conv22_cast_cast_i_cast_cast_cast_cast" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:100]   --->   Operation 108 'add' 'add_ln100' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 109 [1/1] (1.54ns)   --->   "%add_ln100_1 = add i16 %y0, i16 %conv22_cast_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:100]   --->   Operation 109 'add' 'add_ln100_1' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 110 [1/1] (2.08ns)   --->   "%icmp_ln100_1 = icmp_sgt  i18 %add_ln100, i18 %zext_ln100_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:100]   --->   Operation 110 'icmp' 'icmp_ln100_1' <Predicate = true> <Delay = 2.08> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 5.31>
+ST_6 : Operation 111 [1/1] (0.62ns)   --->   "%end = select i1 %icmp_ln99, i16 %h_read, i16 %add_ln99_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 111 'select' 'end' <Predicate = true> <Delay = 0.62> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 112 [1/1] (0.00ns) (grouped into LUT with out node fresh)   --->   "%or_ln100 = or i1 %icmp_ln100, i1 %tobool20_not_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:100]   --->   Operation 112 'or' 'or_ln100' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 113 [1/1] (0.00ns)   --->   "%zext_ln100 = zext i15 %begin" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:100]   --->   Operation 113 'zext' 'zext_ln100' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node fresh)   --->   "%select_ln100 = select i1 %icmp_ln100_1, i16 %add_ln100_1, i16 %zext_ln100" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:100]   --->   Operation 114 'select' 'select_ln100' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 115 [1/1] (0.80ns) (out node of the LUT)   --->   "%fresh = select i1 %or_ln100, i16 %zext_ln100, i16 %select_ln100" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:100]   --->   Operation 115 'select' 'fresh' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 116 [1/1] (2.13ns)   --->   "%icmp_ln101 = icmp_sgt  i16 %fresh, i16 %end" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:101]   --->   Operation 116 'icmp' 'icmp_ln101' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 117 [1/1] (0.62ns)   --->   "%fresh_1 = select i1 %icmp_ln101, i16 %end, i16 %fresh" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:101]   --->   Operation 117 'select' 'fresh_1' <Predicate = true> <Delay = 0.62> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 118 [1/1] (0.83ns)   --->   "%xor_ln102 = xor i16 %fresh, i16 65535" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 118 'xor' 'xor_ln102' <Predicate = true> <Delay = 0.83> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 119 [1/1] (2.13ns)   --->   "%empty_388 = icmp_slt  i16 %empty_387, i16 %xor_ln102" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 119 'icmp' 'empty_388' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 120 [1/1] (0.00ns) (grouped into LUT with out node sub_ln102)   --->   "%smax1_i = select i1 %empty_388, i16 %xor_ln102, i16 %empty_387" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 120 'select' 'smax1_i' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 121 [1/1] (1.54ns) (out node of the LUT)   --->   "%sub_ln102 = sub i16 %smax1_i, i16 %empty_387" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 121 'sub' 'sub_ln102' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 3.36>
+ST_7 : Operation 122 [1/1] (1.54ns)   --->   "%sub50_i = sub i16 %end, i16 %fresh_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 122 'sub' 'sub50_i' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 123 [4/4] (1.82ns) (root node of the DSP)   --->   "%count = mul i16 %sub50_i, i16 %rw_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 123 'mul' 'count' <Predicate = true> <Delay = 1.82> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 124 [4/4] (1.82ns) (root node of the DSP)   --->   "%mul_ln102 = mul i16 %sub_ln102, i16 %rw_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 124 'mul' 'mul_ln102' <Predicate = true> <Delay = 1.82> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 1.82>
+ST_8 : Operation 125 [3/4] (1.82ns) (root node of the DSP)   --->   "%count = mul i16 %sub50_i, i16 %rw_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 125 'mul' 'count' <Predicate = true> <Delay = 1.82> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 126 [3/4] (1.82ns) (root node of the DSP)   --->   "%mul_ln102 = mul i16 %sub_ln102, i16 %rw_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 126 'mul' 'mul_ln102' <Predicate = true> <Delay = 1.82> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 9 <SV = 8> <Delay = 1.82>
+ST_9 : Operation 127 [2/4] (1.82ns) (root node of the DSP)   --->   "%count = mul i16 %sub50_i, i16 %rw_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 127 'mul' 'count' <Predicate = true> <Delay = 1.82> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 128 [2/4] (1.82ns) (root node of the DSP)   --->   "%mul_ln102 = mul i16 %sub_ln102, i16 %rw_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 128 'mul' 'mul_ln102' <Predicate = true> <Delay = 1.82> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 9> <Delay = 2.13>
+ST_10 : Operation 129 [1/1] (0.00ns)   --->   "%specloopname_ln98 = specloopname void @_ssdm_op_SpecLoopName, void @empty_43" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 129 'specloopname' 'specloopname_ln98' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 130 [1/1] (0.00ns)   --->   "%fresh_1_cast_i = sext i16 %fresh_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:101]   --->   Operation 130 'sext' 'fresh_1_cast_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 131 [1/4] (0.00ns) (root node of the DSP)   --->   "%count = mul i16 %sub50_i, i16 %rw_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 131 'mul' 'count' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 132 [1/1] (2.13ns)   --->   "%cmp563_i = icmp_eq  i16 %count, i16 0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99]   --->   Operation 132 'icmp' 'cmp563_i' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 133 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln102 = mul i16 %sub_ln102, i16 %rw_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 133 'mul' 'mul_ln102' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 134 [1/1] (0.00ns)   --->   "%zext_ln106 = zext i16 %count" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 134 'zext' 'zext_ln106' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 135 [1/1] (1.29ns)   --->   "%br_ln102 = br void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 135 'br' 'br_ln102' <Predicate = true> <Delay = 1.29>
+
+State 11 <SV = 10> <Delay = 1.98>
+ST_11 : Operation 136 [1/1] (0.00ns)   --->   "%empty_389 = phi i14 0, void %.split7.i_ifconv, i14 %add_ln102_1, void %._crit_edge.i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 136 'phi' 'empty_389' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 137 [1/1] (0.00ns)   --->   "%cb = phi i16 0, void %.split7.i_ifconv, i16 %cb_2, void %._crit_edge.i"   --->   Operation 137 'phi' 'cb' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 138 [1/1] (1.52ns)   --->   "%add_ln102_1 = add i14 %empty_389, i14 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 138 'add' 'add_ln102_1' <Predicate = true> <Delay = 1.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 139 [1/1] (1.98ns)   --->   "%icmp_ln102 = icmp_eq  i14 %empty_389, i14 %zext_ln102" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 139 'icmp' 'icmp_ln102' <Predicate = true> <Delay = 1.98> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 140 [1/1] (0.00ns)   --->   "%empty_390 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 0, i64 511, i64 0"   --->   Operation 140 'speclooptripcount' 'empty_390' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 141 [1/1] (0.00ns)   --->   "%br_ln102 = br i1 %icmp_ln102, void %.split3.i, void %._crit_edge9.loopexit.i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 141 'br' 'br_ln102' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 142 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i14 @_ssdm_op_PartSelect.i14.i16.i32.i32, i16 %cb, i32 2, i32 15" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103]   --->   Operation 142 'partselect' 'lshr_ln' <Predicate = (!icmp_ln102)> <Delay = 0.00>
+ST_11 : Operation 143 [1/1] (0.00ns)   --->   "%zext_ln103 = zext i14 %lshr_ln" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103]   --->   Operation 143 'zext' 'zext_ln103' <Predicate = (!icmp_ln102)> <Delay = 0.00>
+ST_11 : Operation 144 [3/3] (0.98ns) (grouped into DSP with root node add_ln103)   --->   "%mul_ln103 = mul i30 %zext_ln103, i30 %h_cast4_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103]   --->   Operation 144 'mul' 'mul_ln103' <Predicate = (!icmp_ln102)> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 145 [1/1] (1.54ns)   --->   "%yb_2 = add i16 %yb, i16 2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 145 'add' 'yb_2' <Predicate = (icmp_ln102)> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 146 [1/1] (1.54ns)   --->   "%indvars_iv_next_i = add i16 %zext_ln98, i16 %indvars_iv_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98]   --->   Operation 146 'add' 'indvars_iv_next_i' <Predicate = (icmp_ln102)> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 147 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 147 'br' 'br_ln0' <Predicate = (icmp_ln102)> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 0.98>
+ST_12 : Operation 148 [2/3] (0.98ns) (grouped into DSP with root node add_ln103)   --->   "%mul_ln103 = mul i30 %zext_ln103, i30 %h_cast4_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103]   --->   Operation 148 'mul' 'mul_ln103' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 13 <SV = 12> <Delay = 1.76>
+ST_13 : Operation 149 [1/3] (0.00ns) (grouped into DSP with root node add_ln103)   --->   "%mul_ln103 = mul i30 %zext_ln103, i30 %h_cast4_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103]   --->   Operation 149 'mul' 'mul_ln103' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 150 [1/1] (0.00ns) (grouped into DSP with root node add_ln103)   --->   "%zext_ln103_1 = zext i30 %mul_ln103" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103]   --->   Operation 150 'zext' 'zext_ln103_1' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 151 [2/2] (1.76ns) (root node of the DSP)   --->   "%add_ln103 = add i31 %zext_ln103_1, i31 %fresh_1_cast_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103]   --->   Operation 151 'add' 'add_ln103' <Predicate = true> <Delay = 1.76> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 14 <SV = 13> <Delay = 1.76>
+ST_14 : Operation 152 [1/2] (1.76ns) (root node of the DSP)   --->   "%add_ln103 = add i31 %zext_ln103_1, i31 %fresh_1_cast_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103]   --->   Operation 152 'add' 'add_ln103' <Predicate = true> <Delay = 1.76> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.82> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 15 <SV = 14> <Delay = 5.78>
+ST_15 : Operation 153 [1/1] (0.00ns)   --->   "%sext_ln103 = sext i31 %add_ln103" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103]   --->   Operation 153 'sext' 'sext_ln103' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 154 [2/2] (5.78ns)   --->   "%mul_ln103_1 = mul i32 %sext_ln103, i32 %conv45_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103]   --->   Operation 154 'mul' 'mul_ln103_1' <Predicate = true> <Delay = 5.78> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 5.78>
+ST_16 : Operation 155 [1/1] (0.00ns)   --->   "%specloopname_ln102 = specloopname void @_ssdm_op_SpecLoopName, void @empty_63" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 155 'specloopname' 'specloopname_ln102' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 156 [1/2] (5.78ns)   --->   "%mul_ln103_1 = mul i32 %sext_ln103, i32 %conv45_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103]   --->   Operation 156 'mul' 'mul_ln103_1' <Predicate = true> <Delay = 5.78> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 157 [1/1] (0.00ns)   --->   "%br_ln106 = br i1 %cmp563_i, void %.lr.ph.i, void %._crit_edge.i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 157 'br' 'br_ln106' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 16> <Delay = 4.58>
+ST_17 : Operation 158 [1/1] (1.89ns)   --->   "%add_ln106 = add i32 %mul_ln103_1, i32 %shr_i_cast" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 158 'add' 'add_ln106' <Predicate = true> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 159 [1/1] (0.00ns)   --->   "%shl_ln6 = bitconcatenate i35 @_ssdm_op_BitConcatenate.i35.i32.i3, i32 %add_ln106, i3 0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 159 'bitconcatenate' 'shl_ln6' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 160 [1/1] (0.00ns)   --->   "%zext_ln106_1 = zext i35 %shl_ln6" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 160 'zext' 'zext_ln106_1' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 161 [1/1] (2.69ns)   --->   "%add_ln106_1 = add i64 %zext_ln106_1, i64 %f_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 161 'add' 'add_ln106_1' <Predicate = true> <Delay = 2.69> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 162 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i61 @_ssdm_op_PartSelect.i61.i64.i32.i32, i64 %add_ln106_1, i32 3, i32 63" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 162 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+
+State 18 <SV = 17> <Delay = 5.86>
+ST_18 : Operation 163 [1/1] (0.00ns)   --->   "%sext_ln106 = sext i61 %trunc_ln" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 163 'sext' 'sext_ln106' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 164 [1/1] (0.00ns)   --->   "%feature_read_addr = getelementptr i64 %feature_read, i64 %sext_ln106" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 164 'getelementptr' 'feature_read_addr' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 165 [7/7] (5.86ns)   --->   "%empty_391 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %feature_read_addr, i32 %zext_ln106" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 165 'readreq' 'empty_391' <Predicate = true> <Delay = 5.86> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 18> <Delay = 5.86>
+ST_19 : Operation 166 [6/7] (5.86ns)   --->   "%empty_391 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %feature_read_addr, i32 %zext_ln106" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 166 'readreq' 'empty_391' <Predicate = true> <Delay = 5.86> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 20 <SV = 19> <Delay = 5.86>
+ST_20 : Operation 167 [5/7] (5.86ns)   --->   "%empty_391 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %feature_read_addr, i32 %zext_ln106" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 167 'readreq' 'empty_391' <Predicate = true> <Delay = 5.86> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 21 <SV = 20> <Delay = 5.86>
+ST_21 : Operation 168 [4/7] (5.86ns)   --->   "%empty_391 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %feature_read_addr, i32 %zext_ln106" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 168 'readreq' 'empty_391' <Predicate = true> <Delay = 5.86> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 22 <SV = 21> <Delay = 5.86>
+ST_22 : Operation 169 [3/7] (5.86ns)   --->   "%empty_391 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %feature_read_addr, i32 %zext_ln106" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 169 'readreq' 'empty_391' <Predicate = true> <Delay = 5.86> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 23 <SV = 22> <Delay = 5.86>
+ST_23 : Operation 170 [2/7] (5.86ns)   --->   "%empty_391 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %feature_read_addr, i32 %zext_ln106" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 170 'readreq' 'empty_391' <Predicate = true> <Delay = 5.86> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 24 <SV = 23> <Delay = 5.86>
+ST_24 : Operation 171 [1/7] (5.86ns)   --->   "%empty_391 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %feature_read_addr, i32 %zext_ln106" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 171 'readreq' 'empty_391' <Predicate = true> <Delay = 5.86> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_24 : Operation 172 [1/1] (1.29ns)   --->   "%br_ln106 = br void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 172 'br' 'br_ln106' <Predicate = true> <Delay = 1.29>
+
+State 25 <SV = 24> <Delay = 2.13>
+ST_25 : Operation 173 [1/1] (0.00ns)   --->   "%j = phi i16 0, void %.lr.ph.i, i16 %j_10, void %.split.i"   --->   Operation 173 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 174 [1/1] (1.54ns)   --->   "%j_10 = add i16 %j, i16 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 174 'add' 'j_10' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 175 [1/1] (2.13ns)   --->   "%icmp_ln106 = icmp_eq  i16 %j, i16 %mul_ln102" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 175 'icmp' 'icmp_ln106' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 176 [1/1] (0.00ns)   --->   "%br_ln106 = br i1 %icmp_ln106, void %.split.i, void %._crit_edge.i.loopexit" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 176 'br' 'br_ln106' <Predicate = true> <Delay = 0.00>
+
+State 26 <SV = 25> <Delay = 5.86>
+ST_26 : Operation 177 [1/1] (5.86ns)   --->   "%feature_read_addr_read = read i64 @_ssdm_op_Read.m_axi.p1i64, i64 %feature_read_addr" [E:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 177 'read' 'feature_read_addr_read' <Predicate = (!icmp_ln106)> <Delay = 5.86> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 27 <SV = 26> <Delay = 2.93>
+ST_27 : Operation 178 [1/1] (0.00ns)   --->   "%specpipeline_ln106 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_62" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 178 'specpipeline' 'specpipeline_ln106' <Predicate = (!icmp_ln106)> <Delay = 0.00>
+ST_27 : Operation 179 [1/1] (0.00ns)   --->   "%specloopname_ln106 = specloopname void @_ssdm_op_SpecLoopName, void @empty_74" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106]   --->   Operation 179 'specloopname' 'specloopname_ln106' <Predicate = (!icmp_ln106)> <Delay = 0.00>
+ST_27 : Operation 180 [1/1] (2.93ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %fresh_words, i64 %feature_read_addr_read" [E:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 180 'write' 'write_ln174' <Predicate = (!icmp_ln106)> <Delay = 2.93> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 3.41> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 512> <FIFO>
+ST_27 : Operation 181 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 181 'br' 'br_ln0' <Predicate = (!icmp_ln106)> <Delay = 0.00>
+
+State 28 <SV = 25> <Delay = 1.54>
+ST_28 : Operation 182 [1/1] (0.00ns)   --->   "%br_ln0 = br void %._crit_edge.i"   --->   Operation 182 'br' 'br_ln0' <Predicate = (!cmp563_i)> <Delay = 0.00>
+ST_28 : Operation 183 [1/1] (1.54ns)   --->   "%cb_2 = add i16 %cb, i16 4" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102]   --->   Operation 183 'add' 'cb_2' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 184 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 184 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.67ns, clock uncertainty: 0.8ns.
+
+ <State 1>: 2.93ns
+The critical path consists of the following:
+	wire read on port 'ci' [28]  (0 ns)
+	fifo write on port 'ci_out' [34]  (2.93 ns)
+
+ <State 2>: 2.14ns
+The critical path consists of the following:
+	'phi' operation ('yb') with incoming values : ('yb', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98) [76]  (0 ns)
+	'icmp' operation ('icmp_ln98', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98) [77]  (2.14 ns)
+
+ <State 3>: 0.98ns
+The critical path consists of the following:
+	'mul' operation of DSP[88] ('mul_ln99', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [87]  (0.98 ns)
+
+ <State 4>: 1.76ns
+The critical path consists of the following:
+	'mul' operation of DSP[88] ('mul_ln99', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [87]  (0 ns)
+	'sub' operation of DSP[88] ('y0', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [88]  (1.76 ns)
+
+ <State 5>: 5.42ns
+The critical path consists of the following:
+	'sub' operation of DSP[88] ('y0', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [88]  (1.76 ns)
+	'add' operation ('add_ln99', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [94]  (1.54 ns)
+	'icmp' operation ('icmp_ln99', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [95]  (2.11 ns)
+
+ <State 6>: 5.32ns
+The critical path consists of the following:
+	'or' operation ('or_ln100', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:100) [99]  (0 ns)
+	'select' operation ('fresh', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:100) [106]  (0.8 ns)
+	'xor' operation ('xor_ln102', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102) [113]  (0.834 ns)
+	'icmp' operation ('empty_388', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98) [114]  (2.14 ns)
+	'select' operation ('smax1_i', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:98) [115]  (0 ns)
+	'sub' operation ('sub_ln102', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102) [116]  (1.54 ns)
+
+ <State 7>: 3.37ns
+The critical path consists of the following:
+	'sub' operation ('sub50_i', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [110]  (1.54 ns)
+	'mul' operation of DSP[111] ('count', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [111]  (1.82 ns)
+
+ <State 8>: 1.82ns
+The critical path consists of the following:
+	'mul' operation of DSP[111] ('count', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [111]  (1.82 ns)
+
+ <State 9>: 1.82ns
+The critical path consists of the following:
+	'mul' operation of DSP[111] ('count', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [111]  (1.82 ns)
+
+ <State 10>: 2.14ns
+The critical path consists of the following:
+	'mul' operation of DSP[111] ('count', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [111]  (0 ns)
+	'icmp' operation ('cmp563_i', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:99) [112]  (2.14 ns)
+
+ <State 11>: 1.99ns
+The critical path consists of the following:
+	'phi' operation ('empty_389', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102) with incoming values : ('add_ln102_1', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102) [121]  (0 ns)
+	'icmp' operation ('icmp_ln102', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102) [124]  (1.99 ns)
+
+ <State 12>: 0.98ns
+The critical path consists of the following:
+	'mul' operation of DSP[133] ('mul_ln103', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103) [131]  (0.98 ns)
+
+ <State 13>: 1.76ns
+The critical path consists of the following:
+	'mul' operation of DSP[133] ('mul_ln103', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103) [131]  (0 ns)
+	'add' operation of DSP[133] ('add_ln103', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103) [133]  (1.76 ns)
+
+ <State 14>: 1.76ns
+The critical path consists of the following:
+	'add' operation of DSP[133] ('add_ln103', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103) [133]  (1.76 ns)
+
+ <State 15>: 5.79ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln103_1', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103) [135]  (5.79 ns)
+
+ <State 16>: 5.79ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln103_1', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:103) [135]  (5.79 ns)
+
+ <State 17>: 4.59ns
+The critical path consists of the following:
+	'add' operation ('add_ln106', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [138]  (1.9 ns)
+	'add' operation ('add_ln106_1', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [141]  (2.69 ns)
+
+ <State 18>: 5.87ns
+The critical path consists of the following:
+	'getelementptr' operation ('feature_read_addr', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [144]  (0 ns)
+	bus request on port 'feature_read' (F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [145]  (5.87 ns)
+
+ <State 19>: 5.87ns
+The critical path consists of the following:
+	bus request on port 'feature_read' (F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [145]  (5.87 ns)
+
+ <State 20>: 5.87ns
+The critical path consists of the following:
+	bus request on port 'feature_read' (F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [145]  (5.87 ns)
+
+ <State 21>: 5.87ns
+The critical path consists of the following:
+	bus request on port 'feature_read' (F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [145]  (5.87 ns)
+
+ <State 22>: 5.87ns
+The critical path consists of the following:
+	bus request on port 'feature_read' (F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [145]  (5.87 ns)
+
+ <State 23>: 5.87ns
+The critical path consists of the following:
+	bus request on port 'feature_read' (F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [145]  (5.87 ns)
+
+ <State 24>: 5.87ns
+The critical path consists of the following:
+	bus request on port 'feature_read' (F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [145]  (5.87 ns)
+
+ <State 25>: 2.14ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [148]  (0 ns)
+	'icmp' operation ('icmp_ln106', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:106) [150]  (2.14 ns)
+
+ <State 26>: 5.87ns
+The critical path consists of the following:
+	bus read on port 'feature_read' (E:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174) [155]  (5.87 ns)
+
+ <State 27>: 2.93ns
+The critical path consists of the following:
+	fifo write on port 'fresh_words' (E:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174) [156]  (2.93 ns)
+
+ <State 28>: 1.54ns
+The critical path consists of the following:
+	'add' operation ('cb', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:102) [161]  (1.54 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

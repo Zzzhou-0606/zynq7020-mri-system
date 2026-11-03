@@ -1,0 +1,54 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'p_anonymous_namespace_sums'" level="0">
+<item name = "Date">Sun Nov  1 11:07:00 2026
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)</item>
+<item name = "Project">hls_full_r5</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">6.67 ns, 5.867 ns, 0.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">3265, 16897, 21.768 us, 0.113 ms, 3265, 16897, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_496_1">3264, 3264, 204, -, -, 16, no</column>
+<column name=" + VITIS_LOOP_497_2">65, 65, 3, 1, 1, 64, yes</column>
+<column name=" + VITIS_LOOP_501_3_VITIS_LOOP_501_4">128, 128, 32, -, -, 4, no</column>
+<column name="  ++ VITIS_LOOP_504_5_VITIS_LOOP_504_6">17, 17, 2, 1, 1, 16, yes</column>
+<column name="  ++ VITIS_LOOP_512_8">10, 10, 8, 1, 1, 4, yes</column>
+<column name="- VITIS_LOOP_516_9">16896, 16896, 132, -, -, 128, no</column>
+<column name=" + VITIS_LOOP_517_10">57, 57, 3, 1, 1, 56, yes</column>
+<column name=" + VITIS_LOOP_523_11_VITIS_LOOP_523_12">50, 50, 2, 1, 1, 49, yes</column>
+<column name=" + VITIS_LOOP_531_14">10, 10, 8, 1, 1, 4, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

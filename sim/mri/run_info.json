@@ -1,0 +1,27 @@
+{
+  "measurement_date": "2026-11-01",
+  "measurement_type": "saved physical-board HTTP classification",
+  "reference_type": "saved pipeline-validator physical-board result; not an independent software golden result",
+  "candidate_runs": 1,
+  "baseline_rerun": false,
+  "input_file": "../../data/reference/mri_input.bin",
+  "input_sha256": "e8e0fa99af6a017c92e6262ef1681db32ec5ac21d1cda9abfab6ba30a926f96c",
+  "input_bytes": 10731552,
+  "current_release_compute_hashes": {
+    "bitstream": "fd0e70d379547668f8bf3f7d71c5c9365b7ce65049e1296ba1dfa5a0b49580c9",
+    "model": "c2ccef4c92eec982193569209969cbf474fef17f1f6d3bf00d516c6b89f6083d",
+    "runtime": "42deb734fe2f12a5e044d271f1467fe31719615ce5e7c1d3a7312d9118e68b5c"
+  },
+  "comparison_fields": [
+    "probabilities_abc",
+    "probability_positive",
+    "score",
+    "prediction",
+    "class_id",
+    "severity_probability",
+    "severity_status"
+  ],
+  "classification_equal": true,
+  "scope": "same-input regression; not independent accuracy or clinical validation",
+  "release_context": "Compute evidence recorded before the 2026-11-02 network fix. Bitstream, model and ARM inference executable match the current delivery; no new board run was made during packaging."
+}

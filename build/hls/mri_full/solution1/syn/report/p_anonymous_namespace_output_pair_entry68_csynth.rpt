@@ -1,0 +1,326 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_output_pair_entry68'
+================================================================
+* Date:           Sun Nov  1 11:07:05 2026
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        hls_full_r5
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  2.933 ns|     0.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      1|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    378|    -|
+|Register         |        -|    -|       3|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       3|    379|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_done                |   9|          2|    1|          2|
+    |batch_count_out_blk_n  |   9|          2|    1|          2|
+    |bias_0_out_blk_n       |   9|          2|    1|          2|
+    |bias_1_out_blk_n       |   9|          2|    1|          2|
+    |bias_2_out_blk_n       |   9|          2|    1|          2|
+    |bias_3_out_blk_n       |   9|          2|    1|          2|
+    |bias_4_out_blk_n       |   9|          2|    1|          2|
+    |bias_5_out_blk_n       |   9|          2|    1|          2|
+    |bias_6_out_blk_n       |   9|          2|    1|          2|
+    |bias_7_out_blk_n       |   9|          2|    1|          2|
+    |ci_out2_blk_n          |   9|          2|    1|          2|
+    |ci_out_blk_n           |   9|          2|    1|          2|
+    |co_out_blk_n           |   9|          2|    1|          2|
+    |fr_out_blk_n           |   9|          2|    1|          2|
+    |fw_out_blk_n           |   9|          2|    1|          2|
+    |h_out_blk_n            |   9|          2|    1|          2|
+    |input_out_blk_n        |   9|          2|    1|          2|
+    |k_out3_blk_n           |   9|          2|    1|          2|
+    |k_out_blk_n            |   9|          2|    1|          2|
+    |kind_out_blk_n         |   9|          2|    1|          2|
+    |ob_out1_blk_n          |   9|          2|    1|          2|
+    |ob_out_blk_n           |   9|          2|    1|          2|
+    |oh_out_blk_n           |   9|          2|    1|          2|
+    |output_out_blk_n       |   9|          2|    1|          2|
+    |ow_out_blk_n           |   9|          2|    1|          2|
+    |pad_out_blk_n          |   9|          2|    1|          2|
+    |real_start             |   9|          2|    1|          2|
+    |shifts_0_out_blk_n     |   9|          2|    1|          2|
+    |shifts_1_out_blk_n     |   9|          2|    1|          2|
+    |shifts_2_out_blk_n     |   9|          2|    1|          2|
+    |shifts_3_out_blk_n     |   9|          2|    1|          2|
+    |shifts_4_out_blk_n     |   9|          2|    1|          2|
+    |shifts_5_out_blk_n     |   9|          2|    1|          2|
+    |shifts_6_out_blk_n     |   9|          2|    1|          2|
+    |shifts_7_out_blk_n     |   9|          2|    1|          2|
+    |skip_out_blk_n         |   9|          2|    1|          2|
+    |skipshift_out_blk_n    |   9|          2|    1|          2|
+    |stride_out_blk_n       |   9|          2|    1|          2|
+    |w_out_blk_n            |   9|          2|    1|          2|
+    |wbase_out_blk_n        |   9|          2|    1|          2|
+    |wi_out_blk_n           |   9|          2|    1|          2|
+    |wide_out_blk_n         |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 378|         84|   42|         84|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |ap_CS_fsm       |  1|   0|    1|          0|
+    |ap_done_reg     |  1|   0|    1|          0|
+    |start_once_reg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  3|   0|    3|          0|
+    +----------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+------------------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |               Source Object              |    C Type    |
++------------------------+-----+-----+------------+------------------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  (anonymous namespace)output_pair.entry68|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  (anonymous namespace)output_pair.entry68|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  (anonymous namespace)output_pair.entry68|  return value|
+|start_full_n            |   in|    1|  ap_ctrl_hs|  (anonymous namespace)output_pair.entry68|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  (anonymous namespace)output_pair.entry68|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  (anonymous namespace)output_pair.entry68|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  (anonymous namespace)output_pair.entry68|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  (anonymous namespace)output_pair.entry68|  return value|
+|start_out               |  out|    1|  ap_ctrl_hs|  (anonymous namespace)output_pair.entry68|  return value|
+|start_write             |  out|    1|  ap_ctrl_hs|  (anonymous namespace)output_pair.entry68|  return value|
+|w                       |   in|   64|     ap_none|                                         w|        scalar|
+|fr                      |   in|   64|     ap_none|                                        fr|        scalar|
+|fw                      |   in|   64|     ap_none|                                        fw|        scalar|
+|wide                    |   in|   64|     ap_none|                                      wide|        scalar|
+|wbase                   |   in|   32|     ap_none|                                     wbase|        scalar|
+|ob                      |   in|   16|     ap_none|                                        ob|        scalar|
+|ci                      |   in|   10|     ap_none|                                        ci|        scalar|
+|h                       |   in|   16|     ap_none|                                         h|        scalar|
+|wi                      |   in|   16|     ap_none|                                        wi|        scalar|
+|co                      |   in|   10|     ap_none|                                        co|        scalar|
+|k                       |   in|    3|     ap_none|                                         k|        scalar|
+|stride                  |   in|    2|     ap_none|                                    stride|        scalar|
+|pad                     |   in|    2|     ap_none|                                       pad|        scalar|
+|oh                      |   in|   16|     ap_none|                                        oh|        scalar|
+|ow                      |   in|   16|     ap_none|                                        ow|        scalar|
+|input_r                 |   in|   32|     ap_none|                                   input_r|        scalar|
+|output_r                |   in|   32|     ap_none|                                  output_r|        scalar|
+|skip                    |   in|   32|     ap_none|                                      skip|        scalar|
+|skipshift               |   in|   32|     ap_none|                                 skipshift|        scalar|
+|kind                    |   in|    3|     ap_none|                                      kind|        scalar|
+|batch_count             |   in|   32|     ap_none|                               batch_count|        scalar|
+|p_read                  |   in|   48|     ap_none|                                    p_read|        scalar|
+|p_read1                 |   in|   48|     ap_none|                                   p_read1|        scalar|
+|p_read2                 |   in|   48|     ap_none|                                   p_read2|        scalar|
+|p_read3                 |   in|   48|     ap_none|                                   p_read3|        scalar|
+|p_read4                 |   in|   48|     ap_none|                                   p_read4|        scalar|
+|p_read5                 |   in|   48|     ap_none|                                   p_read5|        scalar|
+|p_read6                 |   in|   48|     ap_none|                                   p_read6|        scalar|
+|p_read7                 |   in|   48|     ap_none|                                   p_read7|        scalar|
+|p_read8                 |   in|   32|     ap_none|                                   p_read8|        scalar|
+|p_read9                 |   in|   32|     ap_none|                                   p_read9|        scalar|
+|p_read10                |   in|   32|     ap_none|                                  p_read10|        scalar|
+|p_read11                |   in|   32|     ap_none|                                  p_read11|        scalar|
+|p_read12                |   in|   32|     ap_none|                                  p_read12|        scalar|
+|p_read13                |   in|   32|     ap_none|                                  p_read13|        scalar|
+|p_read14                |   in|   32|     ap_none|                                  p_read14|        scalar|
+|p_read15                |   in|   32|     ap_none|                                  p_read15|        scalar|
+|w_out_din               |  out|   64|     ap_fifo|                                     w_out|       pointer|
+|w_out_full_n            |   in|    1|     ap_fifo|                                     w_out|       pointer|
+|w_out_write             |  out|    1|     ap_fifo|                                     w_out|       pointer|
+|fr_out_din              |  out|   64|     ap_fifo|                                    fr_out|       pointer|
+|fr_out_full_n           |   in|    1|     ap_fifo|                                    fr_out|       pointer|
+|fr_out_write            |  out|    1|     ap_fifo|                                    fr_out|       pointer|
+|fw_out_din              |  out|   64|     ap_fifo|                                    fw_out|       pointer|
+|fw_out_full_n           |   in|    1|     ap_fifo|                                    fw_out|       pointer|
+|fw_out_write            |  out|    1|     ap_fifo|                                    fw_out|       pointer|
+|wide_out_din            |  out|   64|     ap_fifo|                                  wide_out|       pointer|
+|wide_out_full_n         |   in|    1|     ap_fifo|                                  wide_out|       pointer|
+|wide_out_write          |  out|    1|     ap_fifo|                                  wide_out|       pointer|
+|wbase_out_din           |  out|   32|     ap_fifo|                                 wbase_out|       pointer|
+|wbase_out_full_n        |   in|    1|     ap_fifo|                                 wbase_out|       pointer|
+|wbase_out_write         |  out|    1|     ap_fifo|                                 wbase_out|       pointer|
+|ob_out_din              |  out|   16|     ap_fifo|                                    ob_out|       pointer|
+|ob_out_full_n           |   in|    1|     ap_fifo|                                    ob_out|       pointer|
+|ob_out_write            |  out|    1|     ap_fifo|                                    ob_out|       pointer|
+|ob_out1_din             |  out|   16|     ap_fifo|                                   ob_out1|       pointer|
+|ob_out1_full_n          |   in|    1|     ap_fifo|                                   ob_out1|       pointer|
+|ob_out1_write           |  out|    1|     ap_fifo|                                   ob_out1|       pointer|
+|ci_out_din              |  out|   10|     ap_fifo|                                    ci_out|       pointer|
+|ci_out_full_n           |   in|    1|     ap_fifo|                                    ci_out|       pointer|
+|ci_out_write            |  out|    1|     ap_fifo|                                    ci_out|       pointer|
+|ci_out2_din             |  out|   10|     ap_fifo|                                   ci_out2|       pointer|
+|ci_out2_full_n          |   in|    1|     ap_fifo|                                   ci_out2|       pointer|
+|ci_out2_write           |  out|    1|     ap_fifo|                                   ci_out2|       pointer|
+|h_out_din               |  out|   16|     ap_fifo|                                     h_out|       pointer|
+|h_out_full_n            |   in|    1|     ap_fifo|                                     h_out|       pointer|
+|h_out_write             |  out|    1|     ap_fifo|                                     h_out|       pointer|
+|wi_out_din              |  out|   16|     ap_fifo|                                    wi_out|       pointer|
+|wi_out_full_n           |   in|    1|     ap_fifo|                                    wi_out|       pointer|
+|wi_out_write            |  out|    1|     ap_fifo|                                    wi_out|       pointer|
+|co_out_din              |  out|   10|     ap_fifo|                                    co_out|       pointer|
+|co_out_full_n           |   in|    1|     ap_fifo|                                    co_out|       pointer|
+|co_out_write            |  out|    1|     ap_fifo|                                    co_out|       pointer|
+|k_out_din               |  out|    3|     ap_fifo|                                     k_out|       pointer|
+|k_out_full_n            |   in|    1|     ap_fifo|                                     k_out|       pointer|
+|k_out_write             |  out|    1|     ap_fifo|                                     k_out|       pointer|
+|k_out3_din              |  out|    3|     ap_fifo|                                    k_out3|       pointer|
+|k_out3_full_n           |   in|    1|     ap_fifo|                                    k_out3|       pointer|
+|k_out3_write            |  out|    1|     ap_fifo|                                    k_out3|       pointer|
+|stride_out_din          |  out|    2|     ap_fifo|                                stride_out|       pointer|
+|stride_out_full_n       |   in|    1|     ap_fifo|                                stride_out|       pointer|
+|stride_out_write        |  out|    1|     ap_fifo|                                stride_out|       pointer|
+|pad_out_din             |  out|    2|     ap_fifo|                                   pad_out|       pointer|
+|pad_out_full_n          |   in|    1|     ap_fifo|                                   pad_out|       pointer|
+|pad_out_write           |  out|    1|     ap_fifo|                                   pad_out|       pointer|
+|oh_out_din              |  out|   16|     ap_fifo|                                    oh_out|       pointer|
+|oh_out_full_n           |   in|    1|     ap_fifo|                                    oh_out|       pointer|
+|oh_out_write            |  out|    1|     ap_fifo|                                    oh_out|       pointer|
+|ow_out_din              |  out|   16|     ap_fifo|                                    ow_out|       pointer|
+|ow_out_full_n           |   in|    1|     ap_fifo|                                    ow_out|       pointer|
+|ow_out_write            |  out|    1|     ap_fifo|                                    ow_out|       pointer|
+|input_out_din           |  out|   32|     ap_fifo|                                 input_out|       pointer|
+|input_out_full_n        |   in|    1|     ap_fifo|                                 input_out|       pointer|
+|input_out_write         |  out|    1|     ap_fifo|                                 input_out|       pointer|
+|output_out_din          |  out|   32|     ap_fifo|                                output_out|       pointer|
+|output_out_full_n       |   in|    1|     ap_fifo|                                output_out|       pointer|
+|output_out_write        |  out|    1|     ap_fifo|                                output_out|       pointer|
+|skip_out_din            |  out|   32|     ap_fifo|                                  skip_out|       pointer|
+|skip_out_full_n         |   in|    1|     ap_fifo|                                  skip_out|       pointer|
+|skip_out_write          |  out|    1|     ap_fifo|                                  skip_out|       pointer|
+|skipshift_out_din       |  out|   32|     ap_fifo|                             skipshift_out|       pointer|
+|skipshift_out_full_n    |   in|    1|     ap_fifo|                             skipshift_out|       pointer|
+|skipshift_out_write     |  out|    1|     ap_fifo|                             skipshift_out|       pointer|
+|kind_out_din            |  out|    3|     ap_fifo|                                  kind_out|       pointer|
+|kind_out_full_n         |   in|    1|     ap_fifo|                                  kind_out|       pointer|
+|kind_out_write          |  out|    1|     ap_fifo|                                  kind_out|       pointer|
+|batch_count_out_din     |  out|   32|     ap_fifo|                           batch_count_out|       pointer|
+|batch_count_out_full_n  |   in|    1|     ap_fifo|                           batch_count_out|       pointer|
+|batch_count_out_write   |  out|    1|     ap_fifo|                           batch_count_out|       pointer|
+|bias_0_out_din          |  out|   48|     ap_fifo|                                bias_0_out|       pointer|
+|bias_0_out_full_n       |   in|    1|     ap_fifo|                                bias_0_out|       pointer|
+|bias_0_out_write        |  out|    1|     ap_fifo|                                bias_0_out|       pointer|
+|bias_1_out_din          |  out|   48|     ap_fifo|                                bias_1_out|       pointer|
+|bias_1_out_full_n       |   in|    1|     ap_fifo|                                bias_1_out|       pointer|
+|bias_1_out_write        |  out|    1|     ap_fifo|                                bias_1_out|       pointer|
+|bias_2_out_din          |  out|   48|     ap_fifo|                                bias_2_out|       pointer|
+|bias_2_out_full_n       |   in|    1|     ap_fifo|                                bias_2_out|       pointer|
+|bias_2_out_write        |  out|    1|     ap_fifo|                                bias_2_out|       pointer|
+|bias_3_out_din          |  out|   48|     ap_fifo|                                bias_3_out|       pointer|
+|bias_3_out_full_n       |   in|    1|     ap_fifo|                                bias_3_out|       pointer|
+|bias_3_out_write        |  out|    1|     ap_fifo|                                bias_3_out|       pointer|
+|bias_4_out_din          |  out|   48|     ap_fifo|                                bias_4_out|       pointer|
+|bias_4_out_full_n       |   in|    1|     ap_fifo|                                bias_4_out|       pointer|
+|bias_4_out_write        |  out|    1|     ap_fifo|                                bias_4_out|       pointer|
+|bias_5_out_din          |  out|   48|     ap_fifo|                                bias_5_out|       pointer|
+|bias_5_out_full_n       |   in|    1|     ap_fifo|                                bias_5_out|       pointer|
+|bias_5_out_write        |  out|    1|     ap_fifo|                                bias_5_out|       pointer|
+|bias_6_out_din          |  out|   48|     ap_fifo|                                bias_6_out|       pointer|
+|bias_6_out_full_n       |   in|    1|     ap_fifo|                                bias_6_out|       pointer|
+|bias_6_out_write        |  out|    1|     ap_fifo|                                bias_6_out|       pointer|
+|bias_7_out_din          |  out|   48|     ap_fifo|                                bias_7_out|       pointer|
+|bias_7_out_full_n       |   in|    1|     ap_fifo|                                bias_7_out|       pointer|
+|bias_7_out_write        |  out|    1|     ap_fifo|                                bias_7_out|       pointer|
+|shifts_0_out_din        |  out|   32|     ap_fifo|                              shifts_0_out|       pointer|
+|shifts_0_out_full_n     |   in|    1|     ap_fifo|                              shifts_0_out|       pointer|
+|shifts_0_out_write      |  out|    1|     ap_fifo|                              shifts_0_out|       pointer|
+|shifts_1_out_din        |  out|   32|     ap_fifo|                              shifts_1_out|       pointer|
+|shifts_1_out_full_n     |   in|    1|     ap_fifo|                              shifts_1_out|       pointer|
+|shifts_1_out_write      |  out|    1|     ap_fifo|                              shifts_1_out|       pointer|
+|shifts_2_out_din        |  out|   32|     ap_fifo|                              shifts_2_out|       pointer|
+|shifts_2_out_full_n     |   in|    1|     ap_fifo|                              shifts_2_out|       pointer|
+|shifts_2_out_write      |  out|    1|     ap_fifo|                              shifts_2_out|       pointer|
+|shifts_3_out_din        |  out|   32|     ap_fifo|                              shifts_3_out|       pointer|
+|shifts_3_out_full_n     |   in|    1|     ap_fifo|                              shifts_3_out|       pointer|
+|shifts_3_out_write      |  out|    1|     ap_fifo|                              shifts_3_out|       pointer|
+|shifts_4_out_din        |  out|   32|     ap_fifo|                              shifts_4_out|       pointer|
+|shifts_4_out_full_n     |   in|    1|     ap_fifo|                              shifts_4_out|       pointer|
+|shifts_4_out_write      |  out|    1|     ap_fifo|                              shifts_4_out|       pointer|
+|shifts_5_out_din        |  out|   32|     ap_fifo|                              shifts_5_out|       pointer|
+|shifts_5_out_full_n     |   in|    1|     ap_fifo|                              shifts_5_out|       pointer|
+|shifts_5_out_write      |  out|    1|     ap_fifo|                              shifts_5_out|       pointer|
+|shifts_6_out_din        |  out|   32|     ap_fifo|                              shifts_6_out|       pointer|
+|shifts_6_out_full_n     |   in|    1|     ap_fifo|                              shifts_6_out|       pointer|
+|shifts_6_out_write      |  out|    1|     ap_fifo|                              shifts_6_out|       pointer|
+|shifts_7_out_din        |  out|   32|     ap_fifo|                              shifts_7_out|       pointer|
+|shifts_7_out_full_n     |   in|    1|     ap_fifo|                              shifts_7_out|       pointer|
+|shifts_7_out_write      |  out|    1|     ap_fifo|                              shifts_7_out|       pointer|
++------------------------+-----+-----+------------+------------------------------------------+--------------+
+

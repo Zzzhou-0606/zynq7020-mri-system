@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-10-25",
+  "source": "saved R4 Linux/Qt physical-board DMA outputs",
+  "files": 22,
+  "elements": 18844,
+  "elements_by_path": {
+    "fifo": 6462,
+    "affine": 12382
+  },
+  "mismatches": 0,
+  "reference_rules": {
+    "fifo": "y=x",
+    "affine": "y=(3*x+7) mod 2^32"
+  },
+  "comparison": "saved expected and actual arrays independently recalculated during packaging; hardware not rerun"
+}

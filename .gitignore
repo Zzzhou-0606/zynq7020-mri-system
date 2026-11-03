@@ -1,0 +1,7 @@
+# Superseded full portable archive, retained locally.
+/build/release/host/mri_workstation_20261025_win64.zip
+
+# Runtime user data and pairing credentials are created locally.
+/build/release/host/mri_workstation_slim/data/
+/data/local_cases/
+/data/local_settings/

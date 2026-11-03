@@ -1,0 +1,14 @@
+{
+  "dataset": "OASIS-1",
+  "session_id": "OAS1_0279_MR1",
+  "record_index": 117,
+  "clinical_cdr": 0,
+  "clinical_class_id": 0,
+  "files": {
+    "classification_mri": "classification_t88/mri.hdr",
+    "classification_mask": "classification_t88/brain_mask.hdr",
+    "native_mri": "native_mri/mri.nii.gz",
+    "conformed_mri": "segmentation/mri.mgz",
+    "segmentation": "segmentation/labels.mgz"
+  }
+}

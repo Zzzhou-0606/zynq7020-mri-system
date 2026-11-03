@@ -1,0 +1,224 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_bank_access_0_s'
+================================================================
+* Date:           Sun Nov  1 11:07:10 2026
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        hls_full_r5
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  4.069 ns|     0.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  6.667 ns|  6.667 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      8|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |       16|    -|       0|      0|    -|
+|Multiplexer      |        -|    -|       -|    392|    -|
+|Register         |        -|    -|     260|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       16|    0|     260|    400|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        5|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------+----------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |     Memory     |                       Module                       | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------+----------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |memory_1_0_0_U  |p_anonymous_namespace_bank_access_0_s_memory_1_0_0  |        2|  0|   0|    0|  2016|   16|     1|        32256|
+    |memory_1_0_1_U  |p_anonymous_namespace_bank_access_0_s_memory_1_0_0  |        2|  0|   0|    0|  2016|   16|     1|        32256|
+    |memory_1_0_2_U  |p_anonymous_namespace_bank_access_0_s_memory_1_0_0  |        2|  0|   0|    0|  2016|   16|     1|        32256|
+    |memory_1_0_3_U  |p_anonymous_namespace_bank_access_0_s_memory_1_0_0  |        2|  0|   0|    0|  2016|   16|     1|        32256|
+    |memory_1_1_0_U  |p_anonymous_namespace_bank_access_0_s_memory_1_0_0  |        2|  0|   0|    0|  2016|   16|     1|        32256|
+    |memory_1_1_1_U  |p_anonymous_namespace_bank_access_0_s_memory_1_0_0  |        2|  0|   0|    0|  2016|   16|     1|        32256|
+    |memory_1_1_2_U  |p_anonymous_namespace_bank_access_0_s_memory_1_0_0  |        2|  0|   0|    0|  2016|   16|     1|        32256|
+    |memory_1_1_3_U  |p_anonymous_namespace_bank_access_0_s_memory_1_0_0  |        2|  0|   0|    0|  2016|   16|     1|        32256|
+    +----------------+----------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total           |                                                    |       16|  0|   0|    0| 16128|  128|     8|       258048|
+    +----------------+----------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_pp0                       |       and|   0|  0|   1|           1|           1|
+    |ap_condition_25                    |       and|   0|  0|   1|           1|           1|
+    |ap_enable_state1_pp0_iter0_stage0  |       and|   0|  0|   1|           1|           1|
+    |ap_enable_state2_pp0_iter1_stage0  |       and|   0|  0|   1|           1|           1|
+    |ap_predicate_op18_load_state1      |       and|   0|  0|   1|           1|           1|
+    |ap_predicate_op81_load_state2      |       and|   0|  0|   1|           1|           1|
+    |ap_enable_pp0                      |       xor|   0|  0|   2|           1|           2|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |Total                              |          |   0|  0|   8|           7|           8|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+    |                            Name                            | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_phi_mux_agg_result_v_0_0_write_assign_phi_fu_615_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_0_1_write_assign_phi_fu_600_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_0_2_write_assign_phi_fu_585_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_0_3_write_assign_phi_fu_570_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_1_0_write_assign_phi_fu_555_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_1_1_write_assign_phi_fu_540_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_1_2_write_assign_phi_fu_525_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_1_3_write_assign_phi_fu_510_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_2_0_write_assign_phi_fu_465_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_2_1_write_assign_phi_fu_420_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_2_2_write_assign_phi_fu_390_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_2_3_write_assign_phi_fu_405_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_3_0_write_assign_phi_fu_435_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_3_1_write_assign_phi_fu_450_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_3_2_write_assign_phi_fu_480_p6      |   9|          2|   16|         32|
+    |ap_phi_mux_agg_result_v_3_3_write_assign_phi_fu_495_p6      |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_0_0_write_assign_reg_611  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_0_1_write_assign_reg_596  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_0_2_write_assign_reg_581  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_0_3_write_assign_reg_566  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_1_0_write_assign_reg_551  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_1_1_write_assign_reg_536  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_1_2_write_assign_reg_521  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_1_3_write_assign_reg_506  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_2_0_write_assign_reg_461  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_2_1_write_assign_reg_416  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_2_2_write_assign_reg_386  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_2_3_write_assign_reg_401  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_3_0_write_assign_reg_431  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_3_1_write_assign_reg_446  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_3_2_write_assign_reg_476  |   9|          2|   16|         32|
+    |ap_phi_reg_pp0_iter1_agg_result_v_3_3_write_assign_reg_491  |   9|          2|   16|         32|
+    |memory_1_0_0_address0                                       |  13|          3|   11|         33|
+    |memory_1_0_1_address0                                       |  13|          3|   11|         33|
+    |memory_1_0_2_address0                                       |  13|          3|   11|         33|
+    |memory_1_0_3_address0                                       |  13|          3|   11|         33|
+    |memory_1_1_0_address0                                       |  13|          3|   11|         33|
+    |memory_1_1_1_address0                                       |  13|          3|   11|         33|
+    |memory_1_1_2_address0                                       |  13|          3|   11|         33|
+    |memory_1_1_3_address0                                       |  13|          3|   11|         33|
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                       | 392|         88|  600|       1288|
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |                            Name                            | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                                     |   1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_0_0_write_assign_reg_611  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_0_1_write_assign_reg_596  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_0_2_write_assign_reg_581  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_0_3_write_assign_reg_566  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_1_0_write_assign_reg_551  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_1_1_write_assign_reg_536  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_1_2_write_assign_reg_521  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_1_3_write_assign_reg_506  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_2_0_write_assign_reg_461  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_2_1_write_assign_reg_416  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_2_2_write_assign_reg_386  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_2_3_write_assign_reg_401  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_3_0_write_assign_reg_431  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_3_1_write_assign_reg_446  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_3_2_write_assign_reg_476  |  16|   0|   16|          0|
+    |ap_phi_reg_pp0_iter1_agg_result_v_3_3_write_assign_reg_491  |  16|   0|   16|          0|
+    |reading_read_reg_808                                        |   1|   0|    1|          0|
+    |writing_read_reg_812                                        |   1|   0|    1|          0|
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                       | 260|   0|  260|          0|
+    +------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+-------------------------------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  |            Source Object            |    C Type    |
++--------------+-----+-----+------------+-------------------------------------+--------------+
+|ap_clk        |   in|    1|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_rst        |   in|    1|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_start      |   in|    1|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_done       |  out|    1|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_idle       |  out|    1|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_ready      |  out|    1|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_ce         |   in|    1|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_0   |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_1   |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_2   |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_3   |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_4   |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_5   |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_6   |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_7   |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_8   |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_9   |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_10  |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_11  |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_12  |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_13  |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_14  |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|ap_return_15  |  out|   16|  ap_ctrl_hs|  (anonymous namespace)bank_access<0>|  return value|
+|writing       |   in|    1|     ap_none|                              writing|        scalar|
+|word          |   in|   64|     ap_none|                                 word|        scalar|
+|wa            |   in|   11|     ap_none|                                   wa|        scalar|
+|reading       |   in|    1|     ap_none|                              reading|        scalar|
+|a0            |   in|   11|     ap_none|                                   a0|        scalar|
+|a1            |   in|   11|     ap_none|                                   a1|        scalar|
+|a2            |   in|   11|     ap_none|                                   a2|        scalar|
+|a3            |   in|   11|     ap_none|                                   a3|        scalar|
++--------------+-----+-----+------------+-------------------------------------+--------------+
+

@@ -1,0 +1,20 @@
+{
+  "src/fpga": "src/fpga",
+  "src/shared": "src/shared",
+  "build/dependencies/base_boot": "build/dependencies/base_boot",
+  "build/dependencies/vivado_seed": "build/dependencies/vivado_seed",
+  "build/dependencies/qt_headers": "build/dependencies/qt_headers",
+  "build/dependencies/target_libs": "build/dependencies/target_libs",
+  "build/dependencies/uboot/u-boot-ps-only.elf": "build/dependencies/u-boot-ps-only.elf",
+  "build/release/fpga/fsbl.elf": "build/dependencies/fsbl.elf",
+  "build/release/model": "data",
+  "build/scripts/hls/Build-Hls.ps1": "Build-Hls.ps1",
+  "build/scripts/hls/build_hls.tcl": "build_hls.tcl",
+  "build/scripts/ps/Build-Runtime.ps1": "Build-Runtime.ps1",
+  "build/scripts/ps/Build-Fsbl.ps1": "Build-Fsbl.ps1",
+  "build/scripts/ps/Build-Qt.ps1": "Build-Qt.ps1",
+  "build/scripts/vivado/generate_fsbl.tcl": "generate_fsbl.tcl",
+  "build/scripts/vivado/build_vivado.tcl": "build_vivado.tcl",
+  "build/scripts/package/Finalize-Bit.ps1": "Finalize-Bit.ps1",
+  "build/scripts/package/package_full.py": "package_full.py"
+}

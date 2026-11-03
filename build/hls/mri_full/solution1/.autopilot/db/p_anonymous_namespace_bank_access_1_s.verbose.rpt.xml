@@ -1,0 +1,205 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'p_anonymous_namespace_bank_access_1_s'" level="0">
+<item name = "Date">Sun Nov  1 11:07:10 2026
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)</item>
+<item name = "Project">hls_full_r5</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">6.67 ns, 4.069 ns, 0.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1, 1, 6.667 ns, 6.667 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 8, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">16, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, -, 392, -</column>
+<column name="Register">-, -, 260, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">5, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="memory_0_0_U">p_anonymous_namespace_bank_access_0_s_memory_1_0_0, 2, 0, 0, 0, 2016, 16, 1, 32256</column>
+<column name="memory_0_1_U">p_anonymous_namespace_bank_access_0_s_memory_1_0_0, 2, 0, 0, 0, 2016, 16, 1, 32256</column>
+<column name="memory_0_2_U">p_anonymous_namespace_bank_access_0_s_memory_1_0_0, 2, 0, 0, 0, 2016, 16, 1, 32256</column>
+<column name="memory_0_3_U">p_anonymous_namespace_bank_access_0_s_memory_1_0_0, 2, 0, 0, 0, 2016, 16, 1, 32256</column>
+<column name="memory_115_0_U">p_anonymous_namespace_bank_access_0_s_memory_1_0_0, 2, 0, 0, 0, 2016, 16, 1, 32256</column>
+<column name="memory_115_1_U">p_anonymous_namespace_bank_access_0_s_memory_1_0_0, 2, 0, 0, 0, 2016, 16, 1, 32256</column>
+<column name="memory_115_2_U">p_anonymous_namespace_bank_access_0_s_memory_1_0_0, 2, 0, 0, 0, 2016, 16, 1, 32256</column>
+<column name="memory_115_3_U">p_anonymous_namespace_bank_access_0_s_memory_1_0_0, 2, 0, 0, 0, 2016, 16, 1, 32256</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_pp0">and, 0, 0, 1, 1, 1</column>
+<column name="ap_condition_25">and, 0, 0, 1, 1, 1</column>
+<column name="ap_enable_state1_pp0_iter0_stage0">and, 0, 0, 1, 1, 1</column>
+<column name="ap_enable_state2_pp0_iter1_stage0">and, 0, 0, 1, 1, 1</column>
+<column name="ap_predicate_op18_load_state1">and, 0, 0, 1, 1, 1</column>
+<column name="ap_predicate_op81_load_state2">and, 0, 0, 1, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_phi_mux_agg_result_v_0_0_write_assign_phi_fu_615_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_0_1_write_assign_phi_fu_600_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_0_2_write_assign_phi_fu_585_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_0_3_write_assign_phi_fu_570_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_1_0_write_assign_phi_fu_555_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_1_1_write_assign_phi_fu_540_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_1_2_write_assign_phi_fu_525_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_1_3_write_assign_phi_fu_510_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_2_0_write_assign_phi_fu_465_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_2_1_write_assign_phi_fu_420_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_2_2_write_assign_phi_fu_390_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_2_3_write_assign_phi_fu_405_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_3_0_write_assign_phi_fu_435_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_3_1_write_assign_phi_fu_450_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_3_2_write_assign_phi_fu_480_p6">9, 2, 16, 32</column>
+<column name="ap_phi_mux_agg_result_v_3_3_write_assign_phi_fu_495_p6">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_0_0_write_assign_reg_611">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_0_1_write_assign_reg_596">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_0_2_write_assign_reg_581">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_0_3_write_assign_reg_566">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_1_0_write_assign_reg_551">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_1_1_write_assign_reg_536">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_1_2_write_assign_reg_521">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_1_3_write_assign_reg_506">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_2_0_write_assign_reg_461">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_2_1_write_assign_reg_416">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_2_2_write_assign_reg_386">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_2_3_write_assign_reg_401">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_3_0_write_assign_reg_431">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_3_1_write_assign_reg_446">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_3_2_write_assign_reg_476">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_3_3_write_assign_reg_491">9, 2, 16, 32</column>
+<column name="memory_0_0_address0">13, 3, 11, 33</column>
+<column name="memory_0_1_address0">13, 3, 11, 33</column>
+<column name="memory_0_2_address0">13, 3, 11, 33</column>
+<column name="memory_0_3_address0">13, 3, 11, 33</column>
+<column name="memory_115_0_address0">13, 3, 11, 33</column>
+<column name="memory_115_1_address0">13, 3, 11, 33</column>
+<column name="memory_115_2_address0">13, 3, 11, 33</column>
+<column name="memory_115_3_address0">13, 3, 11, 33</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_0_0_write_assign_reg_611">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_0_1_write_assign_reg_596">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_0_2_write_assign_reg_581">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_0_3_write_assign_reg_566">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_1_0_write_assign_reg_551">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_1_1_write_assign_reg_536">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_1_2_write_assign_reg_521">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_1_3_write_assign_reg_506">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_2_0_write_assign_reg_461">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_2_1_write_assign_reg_416">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_2_2_write_assign_reg_386">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_2_3_write_assign_reg_401">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_3_0_write_assign_reg_431">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_3_1_write_assign_reg_446">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_3_2_write_assign_reg_476">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_agg_result_v_3_3_write_assign_reg_491">16, 0, 16, 0</column>
+<column name="reading_read_reg_808">1, 0, 1, 0</column>
+<column name="writing_read_reg_812">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_0">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_1">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_2">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_3">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_4">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_5">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_6">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_7">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_8">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_9">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_10">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_11">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_12">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_13">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_14">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="ap_return_15">out, 16, ap_ctrl_hs, (anonymous namespace)bank_access&lt;1&gt;, return value</column>
+<column name="writing">in, 1, ap_none, writing, scalar</column>
+<column name="word">in, 64, ap_none, word, scalar</column>
+<column name="wa">in, 11, ap_none, wa, scalar</column>
+<column name="reading">in, 1, ap_none, reading, scalar</column>
+<column name="a0">in, 11, ap_none, a0, scalar</column>
+<column name="a1">in, 11, ap_none, a1, scalar</column>
+<column name="a2">in, 11, ap_none, a2, scalar</column>
+<column name="a3">in, 11, ap_none, a3, scalar</column>
+</table>
+</item>
+</section>
+</profile>

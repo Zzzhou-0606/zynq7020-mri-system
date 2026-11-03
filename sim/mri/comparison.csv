@@ -1,0 +1,10 @@
+field,reference,measured,absolute_difference,equal
+probabilities_abc[0],0.9761679769,0.9761679769,0.0,True
+probabilities_abc[1],0.8779057264,0.8779057264,0.0,True
+probabilities_abc[2],0.9216688871,0.9216688871,0.0,True
+probability_positive,0.9318110502,0.9318110502,0.0,True
+score,93.18110502,93.18110502,0.0,True
+prediction,1,1,0,True
+class_id,2,2,0,True
+severity_probability,0.8692384958,0.8692384958,0.0,True
+severity_status,complete,complete,,True

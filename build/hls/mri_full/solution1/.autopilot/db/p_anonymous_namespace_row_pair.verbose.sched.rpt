@@ -1,0 +1,219 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_row_pair'
+================================================================
+* Date:           Sun Nov  1 11:06:46 2026
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        hls_full_r5
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  7.427 ns|     0.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 3, States = { 1 2 3 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.93>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%previous_rows_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %previous_rows" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 4 'read' 'previous_rows_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%emitting_offset_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %emitting_offset" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 5 'read' 'emitting_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%computing_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %computing" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 6 'read' 'computing_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%ow_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %ow" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 7 'read' 'ow_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%pad_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %pad" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 8 'read' 'pad_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%stride_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %stride" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 9 'read' 'stride_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%k_read = read i3 @_ssdm_op_Read.ap_auto.i3, i3 %k" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 10 'read' 'k_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%wi_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %wi" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 11 'read' 'wi_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%ci_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %ci" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 12 'read' 'ci_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_read_9 = read i48 @_ssdm_op_Read.ap_auto.i48, i48 %p_read7" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 13 'read' 'p_read_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_read_10 = read i48 @_ssdm_op_Read.ap_auto.i48, i48 %p_read6" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 14 'read' 'p_read_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_read_11 = read i48 @_ssdm_op_Read.ap_auto.i48, i48 %p_read5" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 15 'read' 'p_read_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%p_read_12 = read i48 @_ssdm_op_Read.ap_auto.i48, i48 %p_read4" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 16 'read' 'p_read_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_read311 = read i48 @_ssdm_op_Read.ap_auto.i48, i48 %p_read3" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 17 'read' 'p_read311' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%p_read210 = read i48 @_ssdm_op_Read.ap_auto.i48, i48 %p_read2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 18 'read' 'p_read210' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_read19 = read i48 @_ssdm_op_Read.ap_auto.i48, i48 %p_read1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 19 'read' 'p_read19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_read_13 = read i48 @_ssdm_op_Read.ap_auto.i48, i48 %p_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 20 'read' 'p_read_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%previous_rows_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 21 'alloca' 'previous_rows_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%emitting_offset_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 22 'alloca' 'emitting_offset_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%computing_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 23 'alloca' 'computing_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%ow_c1 = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 24 'alloca' 'ow_c1' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%ow_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 25 'alloca' 'ow_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%pad_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 26 'alloca' 'pad_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 2> <FIFO>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%stride_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 27 'alloca' 'stride_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 2> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%k_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 28 'alloca' 'k_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 3> <Depth = 2> <FIFO>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%wi_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 29 'alloca' 'wi_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%ci_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 30 'alloca' 'ci_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 10> <Depth = 2> <FIFO>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%bias14_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 31 'alloca' 'bias14_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 2> <FIFO>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%bias13_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 32 'alloca' 'bias13_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 2> <FIFO>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%bias12_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 33 'alloca' 'bias12_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 2> <FIFO>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%bias11_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 34 'alloca' 'bias11_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 2> <FIFO>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%bias10_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 35 'alloca' 'bias10_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 2> <FIFO>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%bias9_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 36 'alloca' 'bias9_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 2> <FIFO>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%bias8_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 37 'alloca' 'bias8_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 2> <FIFO>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%bias_c = alloca i64 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 38 'alloca' 'bias_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 2> <FIFO>
+ST_1 : Operation 39 [1/1] (2.93ns)   --->   "%call_ln323 = call void @(anonymous namespace)row_pair.entry58, i48 %p_read_13, i48 %p_read19, i48 %p_read210, i48 %p_read311, i48 %p_read_12, i48 %p_read_11, i48 %p_read_10, i48 %p_read_9, i10 %ci_read, i16 %wi_read, i3 %k_read, i2 %stride_read, i2 %pad_read, i16 %ow_read, i1 %computing_read, i1 %emitting_offset_read, i16 %previous_rows_read, i48 %bias_c, i48 %bias8_c, i48 %bias9_c, i48 %bias10_c, i48 %bias11_c, i48 %bias12_c, i48 %bias13_c, i48 %bias14_c, i10 %ci_c, i16 %wi_c, i3 %k_c, i2 %stride_c, i2 %pad_c, i16 %ow_c, i16 %ow_c1, i1 %computing_c, i1 %emitting_offset_c, i16 %previous_rows_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 39 'call' 'call_ln323' <Predicate = true> <Delay = 2.93> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 40 [2/2] (0.00ns)   --->   "%call_ln326 = call void @(anonymous namespace)compute_row, i64 %pixels2, i16 %weights, i16 %weights1, i16 %weights2, i16 %weights3, i16 %weights14, i16 %weights15, i16 %weights16, i16 %weights17, i16 %weights28, i16 %weights29, i16 %weights210, i16 %weights211, i16 %weights312, i16 %weights313, i16 %weights314, i16 %weights315, i16 %weights4, i16 %weights416, i16 %weights417, i16 %weights418, i16 %weights5, i16 %weights519, i16 %weights520, i16 %weights521, i16 %weights6, i16 %weights622, i16 %weights623, i16 %weights624, i16 %weights7, i16 %weights725, i16 %weights726, i16 %weights727, i48 %bias_c, i48 %bias8_c, i48 %bias9_c, i48 %bias10_c, i48 %bias11_c, i48 %bias12_c, i48 %bias13_c, i48 %bias14_c, i10 %ci_c, i16 %wi_c, i3 %k_c, i2 %stride_c, i2 %pad_c, i16 %ow_c, i1 %computing_c, i48 %current, i48 %current28, i48 %current29, i48 %current30, i48 %current15, i48 %current1531, i48 %current1532, i48 %current1533, i48 %current16, i48 %current1634, i48 %current1635, i48 %current1636, i48 %current17, i48 %current1737, i48 %current1738, i48 %current1739, i48 %current18, i48 %current1840, i48 %current1841, i48 %current1842, i48 %current19, i48 %current1943, i48 %current1944, i48 %current1945, i48 %current20, i48 %current2046, i48 %current2047, i48 %current2048, i48 %current21, i48 %current2149, i48 %current2150, i48 %current2151, i16 %memory_1_0_0, i16 %memory_1_0_1, i16 %memory_1_0_2, i16 %memory_1_0_3, i16 %memory_1_1_0, i16 %memory_1_1_1, i16 %memory_1_1_2, i16 %memory_1_1_3, i16 %memory_0_0, i16 %memory_0_1, i16 %memory_0_2, i16 %memory_0_3, i16 %memory_115_0, i16 %memory_115_1, i16 %memory_115_2, i16 %memory_115_3, i64 %p_anonymous_namespace_profile_ticks, i64 %p_anonymous_namespace_profile_mac, i64 %p_anonymous_namespace_profile_wait" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:326]   --->   Operation 40 'call' 'call_ln326' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 41 [2/2] (0.00ns)   --->   "%call_ln327 = call void @(anonymous namespace)emit_row, i256 %results, i48 %previous, i48 %previous52, i48 %previous53, i48 %previous54, i48 %previous22, i48 %previous2255, i48 %previous2256, i48 %previous2257, i48 %previous23, i48 %previous2358, i48 %previous2359, i48 %previous2360, i48 %previous24, i48 %previous2461, i48 %previous2462, i48 %previous2463, i48 %previous25, i48 %previous2564, i48 %previous2565, i48 %previous2566, i48 %previous26, i48 %previous2667, i48 %previous2668, i48 %previous2669, i48 %previous27, i48 %previous2770, i48 %previous2771, i48 %previous2772, i48 %previous28, i48 %previous2873, i48 %previous2874, i48 %previous2875, i16 %previous_rows_c, i16 %ow_c1, i1 %emitting_offset_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:327]   --->   Operation 41 'call' 'call_ln327' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_1_1_3, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 42 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_1_1_2, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 43 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_1_1_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 44 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_1_1_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 45 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_1_0_3, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 46 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_1_0_2, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 47 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_1_0_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 48 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_1_0_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 49 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_115_3, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 50 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_115_2, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 51 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_115_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 52 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_115_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 53 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_0_3, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 54 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_0_2, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 55 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_0_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 56 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_0_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 57 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln320 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_62" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:320]   --->   Operation 58 'specdataflowpipeline' 'specdataflowpipeline_ln320' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i48 %current, i48 %current28, i48 %current29, i48 %current30, i48 %current15, i48 %current1531, i48 %current1532, i48 %current1533, i48 %current16, i48 %current1634, i48 %current1635, i48 %current1636, i48 %current17, i48 %current1737, i48 %current1738, i48 %current1739, i48 %current18, i48 %current1840, i48 %current1841, i48 %current1842, i48 %current19, i48 %current1943, i48 %current1944, i48 %current1945, i48 %current20, i48 %current2046, i48 %current2047, i48 %current2048, i48 %current21, i48 %current2149, i48 %current2150, i48 %current2151, i64 666, i64 27, i64 18446744073709551615"   --->   Operation 59 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i48 %previous, i48 %previous52, i48 %previous53, i48 %previous54, i48 %previous22, i48 %previous2255, i48 %previous2256, i48 %previous2257, i48 %previous23, i48 %previous2358, i48 %previous2359, i48 %previous2360, i48 %previous24, i48 %previous2461, i48 %previous2462, i48 %previous2463, i48 %previous25, i48 %previous2564, i48 %previous2565, i48 %previous2566, i48 %previous26, i48 %previous2667, i48 %previous2668, i48 %previous2669, i48 %previous27, i48 %previous2770, i48 %previous2771, i48 %previous2772, i48 %previous28, i48 %previous2873, i48 %previous2874, i48 %previous2875, i64 666, i64 27, i64 18446744073709551615"   --->   Operation 60 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i256 %results, i64 666, i64 9, i64 18446744073709551615"   --->   Operation 61 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %pixels2, void @empty_65, i32 0, i32 0, void @empty_62, i32 0, i32 0, void @empty_62, void @empty_62, void @empty_62, i32 0, i32 0, i32 0, i32 0, void @empty_62, void @empty_62"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %results, void @empty_65, i32 0, i32 0, void @empty_62, i32 0, i32 0, void @empty_62, void @empty_62, void @empty_62, i32 0, i32 0, i32 0, i32 0, void @empty_62, void @empty_62"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @bias_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i48 %bias_c, i48 %bias_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 64 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln321 = specinterface void @_ssdm_op_SpecInterface, i48 %bias_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 65 'specinterface' 'specinterface_ln321' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%empty_370 = specchannel i32 @_ssdm_op_SpecChannel, void @bias8_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i48 %bias8_c, i48 %bias8_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 66 'specchannel' 'empty_370' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln321 = specinterface void @_ssdm_op_SpecInterface, i48 %bias8_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 67 'specinterface' 'specinterface_ln321' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%empty_371 = specchannel i32 @_ssdm_op_SpecChannel, void @bias9_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i48 %bias9_c, i48 %bias9_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 68 'specchannel' 'empty_371' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln321 = specinterface void @_ssdm_op_SpecInterface, i48 %bias9_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 69 'specinterface' 'specinterface_ln321' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%empty_372 = specchannel i32 @_ssdm_op_SpecChannel, void @bias10_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i48 %bias10_c, i48 %bias10_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 70 'specchannel' 'empty_372' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%specinterface_ln321 = specinterface void @_ssdm_op_SpecInterface, i48 %bias10_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 71 'specinterface' 'specinterface_ln321' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%empty_373 = specchannel i32 @_ssdm_op_SpecChannel, void @bias11_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i48 %bias11_c, i48 %bias11_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 72 'specchannel' 'empty_373' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%specinterface_ln321 = specinterface void @_ssdm_op_SpecInterface, i48 %bias11_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 73 'specinterface' 'specinterface_ln321' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%empty_374 = specchannel i32 @_ssdm_op_SpecChannel, void @bias12_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i48 %bias12_c, i48 %bias12_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 74 'specchannel' 'empty_374' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%specinterface_ln321 = specinterface void @_ssdm_op_SpecInterface, i48 %bias12_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 75 'specinterface' 'specinterface_ln321' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%empty_375 = specchannel i32 @_ssdm_op_SpecChannel, void @bias13_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i48 %bias13_c, i48 %bias13_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 76 'specchannel' 'empty_375' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%specinterface_ln321 = specinterface void @_ssdm_op_SpecInterface, i48 %bias13_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 77 'specinterface' 'specinterface_ln321' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%empty_376 = specchannel i32 @_ssdm_op_SpecChannel, void @bias14_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i48 %bias14_c, i48 %bias14_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 78 'specchannel' 'empty_376' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%specinterface_ln321 = specinterface void @_ssdm_op_SpecInterface, i48 %bias14_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 79 'specinterface' 'specinterface_ln321' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%empty_377 = specchannel i32 @_ssdm_op_SpecChannel, void @ci_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i10 %ci_c, i10 %ci_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 80 'specchannel' 'empty_377' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%specinterface_ln321 = specinterface void @_ssdm_op_SpecInterface, i10 %ci_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 81 'specinterface' 'specinterface_ln321' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%empty_378 = specchannel i32 @_ssdm_op_SpecChannel, void @wi_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i16 %wi_c, i16 %wi_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 82 'specchannel' 'empty_378' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%specinterface_ln321 = specinterface void @_ssdm_op_SpecInterface, i16 %wi_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:321]   --->   Operation 83 'specinterface' 'specinterface_ln321' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%empty_379 = specchannel i32 @_ssdm_op_SpecChannel, void @k_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i3 %k_c, i3 %k_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 84 'specchannel' 'empty_379' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%specinterface_ln322 = specinterface void @_ssdm_op_SpecInterface, i3 %k_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 85 'specinterface' 'specinterface_ln322' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%empty_380 = specchannel i32 @_ssdm_op_SpecChannel, void @stride_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i2 %stride_c, i2 %stride_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 86 'specchannel' 'empty_380' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%specinterface_ln322 = specinterface void @_ssdm_op_SpecInterface, i2 %stride_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 87 'specinterface' 'specinterface_ln322' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%empty_381 = specchannel i32 @_ssdm_op_SpecChannel, void @pad_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i2 %pad_c, i2 %pad_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 88 'specchannel' 'empty_381' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%specinterface_ln322 = specinterface void @_ssdm_op_SpecInterface, i2 %pad_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 89 'specinterface' 'specinterface_ln322' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%empty_382 = specchannel i32 @_ssdm_op_SpecChannel, void @ow_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i16 %ow_c, i16 %ow_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 90 'specchannel' 'empty_382' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%specinterface_ln322 = specinterface void @_ssdm_op_SpecInterface, i16 %ow_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 91 'specinterface' 'specinterface_ln322' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%empty_383 = specchannel i32 @_ssdm_op_SpecChannel, void @ow_c1_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i16 %ow_c1, i16 %ow_c1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 92 'specchannel' 'empty_383' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%specinterface_ln322 = specinterface void @_ssdm_op_SpecInterface, i16 %ow_c1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 93 'specinterface' 'specinterface_ln322' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%empty_384 = specchannel i32 @_ssdm_op_SpecChannel, void @computing_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i1 %computing_c, i1 %computing_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 94 'specchannel' 'empty_384' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%specinterface_ln322 = specinterface void @_ssdm_op_SpecInterface, i1 %computing_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 95 'specinterface' 'specinterface_ln322' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%empty_385 = specchannel i32 @_ssdm_op_SpecChannel, void @emitting_OC_offset_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i1 %emitting_offset_c, i1 %emitting_offset_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 96 'specchannel' 'empty_385' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%specinterface_ln322 = specinterface void @_ssdm_op_SpecInterface, i1 %emitting_offset_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:322]   --->   Operation 97 'specinterface' 'specinterface_ln322' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%empty_386 = specchannel i32 @_ssdm_op_SpecChannel, void @previous_rows_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i16 %previous_rows_c, i16 %previous_rows_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 98 'specchannel' 'empty_386' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%specinterface_ln323 = specinterface void @_ssdm_op_SpecInterface, i16 %previous_rows_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323]   --->   Operation 99 'specinterface' 'specinterface_ln323' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 100 [1/2] (0.00ns)   --->   "%call_ln326 = call void @(anonymous namespace)compute_row, i64 %pixels2, i16 %weights, i16 %weights1, i16 %weights2, i16 %weights3, i16 %weights14, i16 %weights15, i16 %weights16, i16 %weights17, i16 %weights28, i16 %weights29, i16 %weights210, i16 %weights211, i16 %weights312, i16 %weights313, i16 %weights314, i16 %weights315, i16 %weights4, i16 %weights416, i16 %weights417, i16 %weights418, i16 %weights5, i16 %weights519, i16 %weights520, i16 %weights521, i16 %weights6, i16 %weights622, i16 %weights623, i16 %weights624, i16 %weights7, i16 %weights725, i16 %weights726, i16 %weights727, i48 %bias_c, i48 %bias8_c, i48 %bias9_c, i48 %bias10_c, i48 %bias11_c, i48 %bias12_c, i48 %bias13_c, i48 %bias14_c, i10 %ci_c, i16 %wi_c, i3 %k_c, i2 %stride_c, i2 %pad_c, i16 %ow_c, i1 %computing_c, i48 %current, i48 %current28, i48 %current29, i48 %current30, i48 %current15, i48 %current1531, i48 %current1532, i48 %current1533, i48 %current16, i48 %current1634, i48 %current1635, i48 %current1636, i48 %current17, i48 %current1737, i48 %current1738, i48 %current1739, i48 %current18, i48 %current1840, i48 %current1841, i48 %current1842, i48 %current19, i48 %current1943, i48 %current1944, i48 %current1945, i48 %current20, i48 %current2046, i48 %current2047, i48 %current2048, i48 %current21, i48 %current2149, i48 %current2150, i48 %current2151, i16 %memory_1_0_0, i16 %memory_1_0_1, i16 %memory_1_0_2, i16 %memory_1_0_3, i16 %memory_1_1_0, i16 %memory_1_1_1, i16 %memory_1_1_2, i16 %memory_1_1_3, i16 %memory_0_0, i16 %memory_0_1, i16 %memory_0_2, i16 %memory_0_3, i16 %memory_115_0, i16 %memory_115_1, i16 %memory_115_2, i16 %memory_115_3, i64 %p_anonymous_namespace_profile_ticks, i64 %p_anonymous_namespace_profile_mac, i64 %p_anonymous_namespace_profile_wait" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:326]   --->   Operation 100 'call' 'call_ln326' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 101 [1/2] (0.00ns)   --->   "%call_ln327 = call void @(anonymous namespace)emit_row, i256 %results, i48 %previous, i48 %previous52, i48 %previous53, i48 %previous54, i48 %previous22, i48 %previous2255, i48 %previous2256, i48 %previous2257, i48 %previous23, i48 %previous2358, i48 %previous2359, i48 %previous2360, i48 %previous24, i48 %previous2461, i48 %previous2462, i48 %previous2463, i48 %previous25, i48 %previous2564, i48 %previous2565, i48 %previous2566, i48 %previous26, i48 %previous2667, i48 %previous2668, i48 %previous2669, i48 %previous27, i48 %previous2770, i48 %previous2771, i48 %previous2772, i48 %previous28, i48 %previous2873, i48 %previous2874, i48 %previous2875, i16 %previous_rows_c, i16 %ow_c1, i1 %emitting_offset_c" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:327]   --->   Operation 101 'call' 'call_ln327' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%ret_ln320 = ret" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:320]   --->   Operation 102 'ret' 'ret_ln320' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.67ns, clock uncertainty: 0.8ns.
+
+ <State 1>: 2.93ns
+The critical path consists of the following:
+	wire read on port 'previous_rows' (F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323) [137]  (0 ns)
+	'call' operation ('call_ln323', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:323) to '(anonymous namespace)row_pair.entry58' [230]  (2.93 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

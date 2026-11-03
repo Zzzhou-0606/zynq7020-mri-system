@@ -1,0 +1,51 @@
+{
+  "stage": "board_dma",
+  "status": "pass",
+  "environment": {
+    "python": "3.8.2 (default, Mar 13 2020, 10:14:16) \n[GCC 9.3.0]",
+    "platform": "Linux-5.4.0-xilinx-v2020.2-armv7l-with-glibc2.29",
+    "machine": "armv7l",
+    "numpy": "1.20.3",
+    "pynq": "2.7.0"
+  },
+  "dma": "axi_dma_0",
+  "contract": {
+    "tx_bytes": 64,
+    "rx_bytes": 64,
+    "length_limit_bytes": 16383
+  },
+  "timeout_s": 3,
+  "input_shape": [
+    16
+  ],
+  "output_shape": [
+    16
+  ],
+  "input_dtype": "uint32",
+  "output_dtype": "uint32",
+  "accelerator": null,
+  "atol": 0.0,
+  "rtol": 0.0,
+  "completed_registers": {
+    "mm2s_status": 4098,
+    "s2mm_status": 4098,
+    "mm2s_length": 64,
+    "s2mm_length": 64
+  },
+  "transfer_wall_ms": 1.1752099999284837,
+  "received_bytes": 64,
+  "comparison": {
+    "pass": true,
+    "elements": 16,
+    "mismatches": 0,
+    "max_abs_error": 0,
+    "first_bad_index": null,
+    "atol": 0.0,
+    "rtol": 0.0
+  },
+  "source": "qt_demo",
+  "path": "fifo",
+  "bitfile": "qt_dual.bit",
+  "recorded_at": "2026-10-25",
+  "vectors_file": "case_16_fifo.npz"
+}

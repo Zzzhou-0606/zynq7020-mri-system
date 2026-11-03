@@ -1,0 +1,189 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'p_anonymous_namespace_load_uncached'" level="0">
+<item name = "Date">Sun Nov  1 11:07:08 2026
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)</item>
+<item name = "Project">hls_full_r5</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">6.67 ns, 5.867 ns, 0.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="p_anonymous_namespace_read_fresh_U0">p_anonymous_namespace_read_fresh, ?, ?, ?, ?, ?, ?, none</column>
+<column name="p_anonymous_namespace_assemble_rows_U0">p_anonymous_namespace_assemble_rows, ?, ?, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 1, -</column>
+<column name="FIFO">4, -, 953, 622, -</column>
+<column name="Instance">8, 9, 2131, 1929, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">4, 4, 2, 4, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="p_anonymous_namespace_assemble_rows_U0">p_anonymous_namespace_assemble_rows, 8, 4, 1365, 1023, 0</column>
+<column name="p_anonymous_namespace_read_fresh_U0">p_anonymous_namespace_read_fresh, 0, 5, 766, 906, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="ci_c_U">0, 99, 0, -, 2, 10, 20</column>
+<column name="fresh_words_U">4, 161, 0, -, 512, 64, 32768</column>
+<column name="h_c_U">0, 99, 0, -, 2, 16, 32</column>
+<column name="keep_c_U">0, 99, 0, -, 2, 4, 8</column>
+<column name="oh_c_U">0, 99, 0, -, 2, 16, 32</column>
+<column name="pad_c_U">0, 99, 0, -, 2, 2, 4</column>
+<column name="ph_c_U">0, 99, 0, -, 2, 4, 8</column>
+<column name="rw_c_U">0, 99, 0, -, 2, 16, 32</column>
+<column name="stride_c_U">0, 99, 0, -, 2, 2, 4</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="m_axi_feature_read_AWVALID">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWREADY">in, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWADDR">out, 64, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWID">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWLEN">out, 32, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWSIZE">out, 3, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWBURST">out, 2, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWLOCK">out, 2, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWCACHE">out, 4, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWPROT">out, 3, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWQOS">out, 4, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWREGION">out, 4, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_AWUSER">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_WVALID">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_WREADY">in, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_WDATA">out, 64, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_WSTRB">out, 8, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_WLAST">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_WID">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_WUSER">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARVALID">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARREADY">in, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARADDR">out, 64, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARID">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARLEN">out, 32, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARSIZE">out, 3, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARBURST">out, 2, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARLOCK">out, 2, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARCACHE">out, 4, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARPROT">out, 3, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARQOS">out, 4, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARREGION">out, 4, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_ARUSER">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_RVALID">in, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_RREADY">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_RDATA">in, 64, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_RLAST">in, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_RID">in, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_RUSER">in, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_RRESP">in, 2, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_BVALID">in, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_BREADY">out, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_BRESP">in, 2, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_BID">in, 1, m_axi, feature_read, pointer</column>
+<column name="m_axi_feature_read_BUSER">in, 1, m_axi, feature_read, pointer</column>
+<column name="pixels_din">out, 64, ap_fifo, pixels, pointer</column>
+<column name="pixels_full_n">in, 1, ap_fifo, pixels, pointer</column>
+<column name="pixels_write">out, 1, ap_fifo, pixels, pointer</column>
+<column name="f">in, 64, ap_none, f, scalar</column>
+<column name="f_ap_vld">in, 1, ap_none, f, scalar</column>
+<column name="input_r">in, 32, ap_none, input_r, scalar</column>
+<column name="input_r_ap_vld">in, 1, ap_none, input_r, scalar</column>
+<column name="ci">in, 10, ap_none, ci, scalar</column>
+<column name="ci_ap_vld">in, 1, ap_none, ci, scalar</column>
+<column name="h">in, 16, ap_none, h, scalar</column>
+<column name="h_ap_vld">in, 1, ap_none, h, scalar</column>
+<column name="rw">in, 16, ap_none, rw, scalar</column>
+<column name="rw_ap_vld">in, 1, ap_none, rw, scalar</column>
+<column name="ph">in, 4, ap_none, ph, scalar</column>
+<column name="ph_ap_vld">in, 1, ap_none, ph, scalar</column>
+<column name="keep">in, 4, ap_none, keep, scalar</column>
+<column name="keep_ap_vld">in, 1, ap_none, keep, scalar</column>
+<column name="stride">in, 2, ap_none, stride, scalar</column>
+<column name="stride_ap_vld">in, 1, ap_none, stride, scalar</column>
+<column name="pad">in, 2, ap_none, pad, scalar</column>
+<column name="pad_ap_vld">in, 1, ap_none, pad, scalar</column>
+<column name="oh">in, 16, ap_none, oh, scalar</column>
+<column name="oh_ap_vld">in, 1, ap_none, oh, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, (anonymous namespace)load_uncached, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, (anonymous namespace)load_uncached, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, (anonymous namespace)load_uncached, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, (anonymous namespace)load_uncached, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, (anonymous namespace)load_uncached, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, (anonymous namespace)load_uncached, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, (anonymous namespace)load_uncached, return value</column>
+</table>
+</item>
+</section>
+</profile>

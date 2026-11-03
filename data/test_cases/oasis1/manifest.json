@@ -1,0 +1,261 @@
+{
+  "dataset": "OASIS-1",
+  "case_count": 5,
+  "source_pool": "frozen development40/evaluation40; previously used during development",
+  "sampling": "uniform without replacement; not selected by labels or predictions",
+  "initial_two_seed": 12910693207909900455,
+  "additional_three_seed": "not recorded in original sampling; cannot replay by seed",
+  "existing_outputs_only": true,
+  "cases": [
+    {
+      "session_id": "OAS1_0179_MR1",
+      "directory": "oas1_0179_mr1",
+      "record_index": 72,
+      "files": [
+        {
+          "path": "classification_t88/mri.hdr",
+          "bytes": 348,
+          "sha256": "6307b059bae7dc1f7183e37c6ba48845062d04cd7628c72791dc96e5ae63e5c9"
+        },
+        {
+          "path": "classification_t88/mri.img",
+          "bytes": 12886016,
+          "sha256": "b268984ab5f7291281624a3967cbe1a00ac3edfa8ce87602d676fbb4ddfb1012"
+        },
+        {
+          "path": "classification_t88/brain_mask.hdr",
+          "bytes": 348,
+          "sha256": "303f0896fbc58b40d5d88226ce073a69d852f581680bb032f227cfe638b2e590"
+        },
+        {
+          "path": "classification_t88/brain_mask.img",
+          "bytes": 6443008,
+          "sha256": "cc3d0e9e733738549bfa3e3fcc1562eecae1b854f309e6feb83e9740897266c3"
+        },
+        {
+          "path": "native_mri/mri.nii.gz",
+          "bytes": 5331189,
+          "sha256": "1a2fbc9f5b3e77ffedd31580cfad5ad71ec9ce0d0fe020700ec470d835e6b1bc"
+        },
+        {
+          "path": "results/region_overlay.png",
+          "bytes": 251368,
+          "sha256": "e2d120762f21ff9688119697169314c04299dae533b8b8b63c1202aee2a5d701"
+        },
+        {
+          "path": "results/t88_qc.png",
+          "bytes": 87767,
+          "sha256": "50da0f19d78e7e1f4170156baa89a451d1d68c01bf8e5b8532d209b171788a54"
+        },
+        {
+          "path": "segmentation/labels.mgz",
+          "bytes": 519639,
+          "sha256": "3db56af7a0882c2b1b3d88165347bb5c0c99cbed5377a528bb22a05eacb70fd8"
+        },
+        {
+          "path": "segmentation/mri.mgz",
+          "bytes": 2958153,
+          "sha256": "cf1e940e2665d235d1af1b58397ea130d0a18e913bb5cd656c2130e57b070f5e"
+        }
+      ]
+    },
+    {
+      "session_id": "OAS1_0234_MR1",
+      "directory": "oas1_0234_mr1",
+      "record_index": 95,
+      "files": [
+        {
+          "path": "classification_t88/mri.hdr",
+          "bytes": 348,
+          "sha256": "8ad9d6045d70b2008f70e1abc8c7cfa71ef1059dc1020766005213bc77662e90"
+        },
+        {
+          "path": "classification_t88/mri.img",
+          "bytes": 12886016,
+          "sha256": "4e5f2ea9df2ac44053b9a23358e915c4dc6b6336acce5cd05286aea6b76a0c41"
+        },
+        {
+          "path": "classification_t88/brain_mask.hdr",
+          "bytes": 348,
+          "sha256": "4f9fea7180f22789863a8749a3b0e05b1a7eb9fcdb14befe6694f965ad739c0d"
+        },
+        {
+          "path": "classification_t88/brain_mask.img",
+          "bytes": 6443008,
+          "sha256": "1c7e36b0615037278d0d0b924be1176e2e448e4b33a8fafe66553e28bb371836"
+        },
+        {
+          "path": "native_mri/mri.nii.gz",
+          "bytes": 6401498,
+          "sha256": "f24599c2bb3f5f4171fb013f5b75784bf00ece0ae2bafb311f6a41b8fd4954d8"
+        },
+        {
+          "path": "results/region_overlay.png",
+          "bytes": 281267,
+          "sha256": "0e266e88a6da747d392bf30a9c6f696392548703a9278a701551fff772f90d2f"
+        },
+        {
+          "path": "results/t88_qc.png",
+          "bytes": 85070,
+          "sha256": "1385aa879d11e3810c663e84b008bb2e1554c845caa01986a5e1c302d0edb195"
+        },
+        {
+          "path": "segmentation/labels.mgz",
+          "bytes": 585018,
+          "sha256": "ffa423e2a08786980b395ba1ffc5fc7fed13e9661dc4ea712ec0078e52db167c"
+        },
+        {
+          "path": "segmentation/mri.mgz",
+          "bytes": 3680373,
+          "sha256": "410d3ced8816b0ce6745c3dc55cc2950da1dcb03f11b90dda3930758ed7f5eb2"
+        }
+      ]
+    },
+    {
+      "session_id": "OAS1_0279_MR1",
+      "directory": "oas1_0279_mr1",
+      "record_index": 117,
+      "files": [
+        {
+          "path": "classification_t88/mri.hdr",
+          "bytes": 348,
+          "sha256": "5efe782a44ec44c8c38372b80b2990d4031a87a490e31fb248ef98653a266364"
+        },
+        {
+          "path": "classification_t88/mri.img",
+          "bytes": 12886016,
+          "sha256": "2f1d332295a00ed8acc1d6de3ff727bf033f368663eb350fff311aaffcf54cf7"
+        },
+        {
+          "path": "classification_t88/brain_mask.hdr",
+          "bytes": 348,
+          "sha256": "4f9fea7180f22789863a8749a3b0e05b1a7eb9fcdb14befe6694f965ad739c0d"
+        },
+        {
+          "path": "classification_t88/brain_mask.img",
+          "bytes": 6443008,
+          "sha256": "7105b457166e4fafa42e3638b7927c869438c56e9ff04766cb928883dc0e97c1"
+        },
+        {
+          "path": "native_mri/mri.nii.gz",
+          "bytes": 10991799,
+          "sha256": "4ba451e6d443b004056b43ee1d28cc0d7a0e4eb0400b0423bc06ed9d26dc27b1"
+        },
+        {
+          "path": "results/region_overlay.png",
+          "bytes": 295035,
+          "sha256": "280744cd8560cc7734c452c4cd89bb46d268f337e640d933f3361314eefdd41a"
+        },
+        {
+          "path": "results/t88_qc.png",
+          "bytes": 86481,
+          "sha256": "5f1b070ce6922ad4c6bbe09ff203fe9bc8511f673a7ee33bbcd213bccc615c70"
+        },
+        {
+          "path": "segmentation/labels.mgz",
+          "bytes": 596658,
+          "sha256": "4f958c20094508af2d8e6f1793be4e6c187571d11c8e22e048f84f788134f12c"
+        },
+        {
+          "path": "segmentation/mri.mgz",
+          "bytes": 5735428,
+          "sha256": "db0401b15b28ecaa84a143016f10639451dac91d313bb669dfe7364d311a4508"
+        }
+      ]
+    },
+    {
+      "session_id": "OAS1_0365_MR1",
+      "directory": "oas1_0365_mr1",
+      "record_index": 159,
+      "files": [
+        {
+          "path": "classification_t88/mri.hdr",
+          "bytes": 348,
+          "sha256": "59ee40f584c2fecaffe4e2ed5c76934734cf008abc983b158b598e6fb000e0f9"
+        },
+        {
+          "path": "classification_t88/mri.img",
+          "bytes": 12886016,
+          "sha256": "b00c4af27faf72a8c4c183c6f3f9818990390a64c23ec9455ea958bc180b837f"
+        },
+        {
+          "path": "classification_t88/brain_mask.hdr",
+          "bytes": 348,
+          "sha256": "303f0896fbc58b40d5d88226ce073a69d852f581680bb032f227cfe638b2e590"
+        },
+        {
+          "path": "classification_t88/brain_mask.img",
+          "bytes": 6443008,
+          "sha256": "8abcab2e70a7f93d51d9dbc368c5ac761453f20bd7311c5a858e3fc5b1e1607d"
+        },
+        {
+          "path": "native_mri/mri.nii.gz",
+          "bytes": 7123336,
+          "sha256": "26e7032d60684488975959eebb4f6cb63960cc88a0d0e677578a51103b943c7c"
+        },
+        {
+          "path": "results/t88_qc.png",
+          "bytes": 91388,
+          "sha256": "af61c115bf56abb01bad4b83bf4d4b91e4d266d452af43ed587421cc08f62a7b"
+        },
+        {
+          "path": "segmentation/labels.mgz",
+          "bytes": 685870,
+          "sha256": "bea1f1b5e5f704b63129e4570c33b34c52a1ef749691d621fba5a1a57488fca3"
+        },
+        {
+          "path": "segmentation/mri.mgz",
+          "bytes": 4072792,
+          "sha256": "c6c341a17a4867ef4fafc335b96caad3be7621a095370be36ffb6d4cb50e05b5"
+        }
+      ]
+    },
+    {
+      "session_id": "OAS1_0424_MR1",
+      "directory": "oas1_0424_mr1",
+      "record_index": 178,
+      "files": [
+        {
+          "path": "classification_t88/mri.hdr",
+          "bytes": 348,
+          "sha256": "05f9c629e8e25ebbe0032af8ae2f10ce20282eb30b4339ac0ddb29223498797a"
+        },
+        {
+          "path": "classification_t88/mri.img",
+          "bytes": 12886016,
+          "sha256": "dd4607f432064a627ba37206ea956f5291b11cdf5463b8e902a49ec572ed4d6a"
+        },
+        {
+          "path": "classification_t88/brain_mask.hdr",
+          "bytes": 348,
+          "sha256": "303f0896fbc58b40d5d88226ce073a69d852f581680bb032f227cfe638b2e590"
+        },
+        {
+          "path": "classification_t88/brain_mask.img",
+          "bytes": 6443008,
+          "sha256": "2888dc2d47d7070c6e7a6f88413656fd038a45561cb58baa9cc7ff9bef489188"
+        },
+        {
+          "path": "native_mri/mri.nii.gz",
+          "bytes": 7139839,
+          "sha256": "879f2ff6c6a12f3d8db3d0d46a56819c11dae0827a950551207f1dba795b5c80"
+        },
+        {
+          "path": "results/t88_qc.png",
+          "bytes": 90769,
+          "sha256": "edcff8aaca13715306978be69578dfd82616a17a3c5f4fccb0f5c41ae5384ce9"
+        },
+        {
+          "path": "segmentation/labels.mgz",
+          "bytes": 622979,
+          "sha256": "d1ddf42389ce20abcec92fa1040ac40329d5cfec16b7813dac72e29afeef1fcf"
+        },
+        {
+          "path": "segmentation/mri.mgz",
+          "bytes": 4040868,
+          "sha256": "6f25b72f607a965f0431e32ce7bdc66305923e0392d7751ef493054c33dec94b"
+        }
+      ]
+    }
+  ]
+}

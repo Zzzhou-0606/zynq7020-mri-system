@@ -1,0 +1,277 @@
+{
+	"version": "1.0",
+	"modules": {
+		"mri_full": {
+			"proto_instances": {
+				"/AESL_inst_mri_full_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst_n"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_conv_fu_1218_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_load_weights_fu_917/grp_p_anonymous_namespace_load_weights_fu_917_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/grp_p_anonymous_namespace_output_pair_fu_765_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_load_weights52_U0/p_anonymous_namespace_load_weights52_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Block_split5_proc_U0/p_anonymous_namespace_output_pair_Block_split5_proc_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/grp_p_anonymous_namespace_block_fu_473_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_block_Block_split1_proc62_U0/p_anonymous_namespace_block_Block_split1_proc62_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_block_Block_split93_proc_U0/p_anonymous_namespace_block_Block_split93_proc_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_compute_tiles_U0/grp_p_anonymous_namespace_row_pair_fu_591/grp_p_anonymous_namespace_row_pair_fu_591_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_compute_tiles_U0/grp_p_anonymous_namespace_row_pair_fu_591/p_anonymous_namespace_compute_row_U0/grp_p_anonymous_namespace_bank_access_0_s_fu_1621/grp_p_anonymous_namespace_bank_access_0_s_fu_1621_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_compute_tiles_U0/grp_p_anonymous_namespace_row_pair_fu_591/p_anonymous_namespace_compute_row_U0/grp_p_anonymous_namespace_bank_access_1_s_fu_1656/grp_p_anonymous_namespace_bank_access_1_s_fu_1656_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_compute_tiles_U0/grp_p_anonymous_namespace_row_pair_fu_591/p_anonymous_namespace_compute_row_U0/p_anonymous_namespace_compute_row_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_compute_tiles_U0/grp_p_anonymous_namespace_row_pair_fu_591/p_anonymous_namespace_emit_row_U0/p_anonymous_namespace_emit_row_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_compute_tiles_U0/grp_p_anonymous_namespace_row_pair_fu_591/p_anonymous_namespace_row_pair_entry58_U0/p_anonymous_namespace_row_pair_entry58_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_compute_tiles_U0/p_anonymous_namespace_compute_tiles_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_load_tiles_U0/grp_p_anonymous_namespace_load_uncached_fu_569/grp_p_anonymous_namespace_load_uncached_fu_569_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_load_tiles_U0/grp_p_anonymous_namespace_load_uncached_fu_569/p_anonymous_namespace_assemble_rows_U0/p_anonymous_namespace_assemble_rows_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_load_tiles_U0/grp_p_anonymous_namespace_load_uncached_fu_569/p_anonymous_namespace_read_fresh_U0/p_anonymous_namespace_read_fresh_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_load_tiles_U0/p_anonymous_namespace_load_tiles_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/grp_p_anonymous_namespace_block_fu_473/p_anonymous_namespace_store_tiles_U0/p_anonymous_namespace_store_tiles_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0/p_anonymous_namespace_output_pair_Loop_VITIS_LOOP_420_1_proc_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_conv_fu_1218/grp_p_anonymous_namespace_output_pair_fu_765/p_anonymous_namespace_output_pair_entry68_U0/p_anonymous_namespace_output_pair_entry68_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_maxpool_fu_1314/grp_p_anonymous_namespace_maxpool_fu_1314_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_p_anonymous_namespace_sums_fu_1336/grp_p_anonymous_namespace_sums_fu_1336_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				}
+			}
+		}
+	}
+}

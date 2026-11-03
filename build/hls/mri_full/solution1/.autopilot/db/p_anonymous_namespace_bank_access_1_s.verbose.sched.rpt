@@ -1,0 +1,248 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_bank_access_1_s'
+================================================================
+* Date:           Sun Nov  1 11:06:40 2026
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        hls_full_r5
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  4.069 ns|     0.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  6.667 ns|  6.667 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.77>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%a3_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %a3" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 3 'read' 'a3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%a2_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %a2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 4 'read' 'a2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%a1_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %a1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 5 'read' 'a1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%a0_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %a0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 6 'read' 'a0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%reading_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %reading" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 7 'read' 'reading_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%wa_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %wa" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 8 'read' 'wa_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%word_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %word" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 9 'read' 'word_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%writing_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %writing" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 10 'read' 'writing_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln216 = br i1 %writing_read, void, void %.split.0.i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:216]   --->   Operation 11 'br' 'br_ln216' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.29ns)   --->   "%br_ln221 = br i1 %reading_read, void %(anonymous namespace)bank_access<1>.exit, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:221]   --->   Operation 12 'br' 'br_ln221' <Predicate = (!writing_read)> <Delay = 1.29>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%idxprom11_i = zext i11 %a0_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 13 'zext' 'idxprom11_i' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%idxprom19_i = zext i11 %a1_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 14 'zext' 'idxprom19_i' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%idxprom27_i = zext i11 %a2_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 15 'zext' 'idxprom27_i' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%idxprom35_i = zext i11 %a3_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 16 'zext' 'idxprom35_i' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%memory_0_0_addr_1 = getelementptr i16 %memory_0_0, i64 0, i64 %idxprom11_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 17 'getelementptr' 'memory_0_0_addr_1' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (2.77ns)   --->   "%memory_0_0_load = load i11 %memory_0_0_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 18 'load' 'memory_0_0_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%memory_0_0_addr_2 = getelementptr i16 %memory_0_0, i64 0, i64 %idxprom19_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 19 'getelementptr' 'memory_0_0_addr_2' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 20 [2/2] (2.77ns)   --->   "%memory_0_0_load_1 = load i11 %memory_0_0_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 20 'load' 'memory_0_0_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%memory_115_0_addr_1 = getelementptr i16 %memory_115_0, i64 0, i64 %idxprom27_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 21 'getelementptr' 'memory_115_0_addr_1' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 22 [2/2] (2.77ns)   --->   "%memory_115_0_load = load i11 %memory_115_0_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 22 'load' 'memory_115_0_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%memory_115_0_addr_2 = getelementptr i16 %memory_115_0, i64 0, i64 %idxprom35_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 23 'getelementptr' 'memory_115_0_addr_2' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 24 [2/2] (2.77ns)   --->   "%memory_115_0_load_1 = load i11 %memory_115_0_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 24 'load' 'memory_115_0_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%memory_0_1_addr_1 = getelementptr i16 %memory_0_1, i64 0, i64 %idxprom11_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 25 'getelementptr' 'memory_0_1_addr_1' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 26 [2/2] (2.77ns)   --->   "%memory_0_1_load = load i11 %memory_0_1_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 26 'load' 'memory_0_1_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%memory_0_1_addr_2 = getelementptr i16 %memory_0_1, i64 0, i64 %idxprom19_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 27 'getelementptr' 'memory_0_1_addr_2' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 28 [2/2] (2.77ns)   --->   "%memory_0_1_load_1 = load i11 %memory_0_1_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 28 'load' 'memory_0_1_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%memory_115_1_addr_1 = getelementptr i16 %memory_115_1, i64 0, i64 %idxprom27_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 29 'getelementptr' 'memory_115_1_addr_1' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 30 [2/2] (2.77ns)   --->   "%memory_115_1_load = load i11 %memory_115_1_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 30 'load' 'memory_115_1_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%memory_115_1_addr_2 = getelementptr i16 %memory_115_1, i64 0, i64 %idxprom35_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 31 'getelementptr' 'memory_115_1_addr_2' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 32 [2/2] (2.77ns)   --->   "%memory_115_1_load_1 = load i11 %memory_115_1_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 32 'load' 'memory_115_1_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%memory_0_2_addr_1 = getelementptr i16 %memory_0_2, i64 0, i64 %idxprom11_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 33 'getelementptr' 'memory_0_2_addr_1' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 34 [2/2] (2.77ns)   --->   "%memory_0_2_load = load i11 %memory_0_2_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 34 'load' 'memory_0_2_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%memory_0_2_addr_2 = getelementptr i16 %memory_0_2, i64 0, i64 %idxprom19_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 35 'getelementptr' 'memory_0_2_addr_2' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 36 [2/2] (2.77ns)   --->   "%memory_0_2_load_1 = load i11 %memory_0_2_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 36 'load' 'memory_0_2_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%memory_115_2_addr_1 = getelementptr i16 %memory_115_2, i64 0, i64 %idxprom27_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 37 'getelementptr' 'memory_115_2_addr_1' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 38 [2/2] (2.77ns)   --->   "%memory_115_2_load = load i11 %memory_115_2_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 38 'load' 'memory_115_2_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%memory_115_2_addr_2 = getelementptr i16 %memory_115_2, i64 0, i64 %idxprom35_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 39 'getelementptr' 'memory_115_2_addr_2' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 40 [2/2] (2.77ns)   --->   "%memory_115_2_load_1 = load i11 %memory_115_2_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 40 'load' 'memory_115_2_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%memory_0_3_addr_1 = getelementptr i16 %memory_0_3, i64 0, i64 %idxprom11_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 41 'getelementptr' 'memory_0_3_addr_1' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 42 [2/2] (2.77ns)   --->   "%memory_0_3_load = load i11 %memory_0_3_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 42 'load' 'memory_0_3_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%memory_0_3_addr_2 = getelementptr i16 %memory_0_3, i64 0, i64 %idxprom19_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 43 'getelementptr' 'memory_0_3_addr_2' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 44 [2/2] (2.77ns)   --->   "%memory_0_3_load_1 = load i11 %memory_0_3_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 44 'load' 'memory_0_3_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%memory_115_3_addr_1 = getelementptr i16 %memory_115_3, i64 0, i64 %idxprom27_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 45 'getelementptr' 'memory_115_3_addr_1' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 46 [2/2] (2.77ns)   --->   "%memory_115_3_load = load i11 %memory_115_3_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 46 'load' 'memory_115_3_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%memory_115_3_addr_2 = getelementptr i16 %memory_115_3, i64 0, i64 %idxprom35_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 47 'getelementptr' 'memory_115_3_addr_2' <Predicate = (!writing_read & reading_read)> <Delay = 0.00>
+ST_1 : Operation 48 [2/2] (2.77ns)   --->   "%memory_115_3_load_1 = load i11 %memory_115_3_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 48 'load' 'memory_115_3_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%idxprom4_i = zext i11 %wa_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 49 'zext' 'idxprom4_i' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%trunc_ln33 = trunc i64 %word_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:33]   --->   Operation 50 'trunc' 'trunc_ln33' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%conv_i_1_i = partselect i16 @_ssdm_op_PartSelect.i16.i64.i32.i32, i64 %word_read, i32 16, i32 31" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 51 'partselect' 'conv_i_1_i' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%conv_i_2_i = partselect i16 @_ssdm_op_PartSelect.i16.i64.i32.i32, i64 %word_read, i32 32, i32 47" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 52 'partselect' 'conv_i_2_i' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%conv_i_3_i = partselect i16 @_ssdm_op_PartSelect.i16.i64.i32.i32, i64 %word_read, i32 48, i32 63" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 53 'partselect' 'conv_i_3_i' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%memory_0_0_addr = getelementptr i16 %memory_0_0, i64 0, i64 %idxprom4_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 54 'getelementptr' 'memory_0_0_addr' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (2.77ns)   --->   "%store_ln219 = store i16 %trunc_ln33, i11 %memory_0_0_addr" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 55 'store' 'store_ln219' <Predicate = (writing_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%memory_0_1_addr = getelementptr i16 %memory_0_1, i64 0, i64 %idxprom4_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 56 'getelementptr' 'memory_0_1_addr' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (2.77ns)   --->   "%store_ln219 = store i16 %conv_i_1_i, i11 %memory_0_1_addr" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 57 'store' 'store_ln219' <Predicate = (writing_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%memory_0_2_addr = getelementptr i16 %memory_0_2, i64 0, i64 %idxprom4_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 58 'getelementptr' 'memory_0_2_addr' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (2.77ns)   --->   "%store_ln219 = store i16 %conv_i_2_i, i11 %memory_0_2_addr" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 59 'store' 'store_ln219' <Predicate = (writing_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%memory_0_3_addr = getelementptr i16 %memory_0_3, i64 0, i64 %idxprom4_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 60 'getelementptr' 'memory_0_3_addr' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (2.77ns)   --->   "%store_ln219 = store i16 %conv_i_3_i, i11 %memory_0_3_addr" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 61 'store' 'store_ln219' <Predicate = (writing_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%memory_115_0_addr = getelementptr i16 %memory_115_0, i64 0, i64 %idxprom4_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 62 'getelementptr' 'memory_115_0_addr' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (2.77ns)   --->   "%store_ln219 = store i16 %trunc_ln33, i11 %memory_115_0_addr" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 63 'store' 'store_ln219' <Predicate = (writing_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%memory_115_1_addr = getelementptr i16 %memory_115_1, i64 0, i64 %idxprom4_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 64 'getelementptr' 'memory_115_1_addr' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (2.77ns)   --->   "%store_ln219 = store i16 %conv_i_1_i, i11 %memory_115_1_addr" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 65 'store' 'store_ln219' <Predicate = (writing_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%memory_115_2_addr = getelementptr i16 %memory_115_2, i64 0, i64 %idxprom4_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 66 'getelementptr' 'memory_115_2_addr' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (2.77ns)   --->   "%store_ln219 = store i16 %conv_i_2_i, i11 %memory_115_2_addr" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 67 'store' 'store_ln219' <Predicate = (writing_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%memory_115_3_addr = getelementptr i16 %memory_115_3, i64 0, i64 %idxprom4_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 68 'getelementptr' 'memory_115_3_addr' <Predicate = (writing_read)> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (2.77ns)   --->   "%store_ln219 = store i16 %conv_i_3_i, i11 %memory_115_3_addr" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:219]   --->   Operation 69 'store' 'store_ln219' <Predicate = (writing_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_1 : Operation 70 [1/1] (1.29ns)   --->   "%br_ln0 = br void %(anonymous namespace)bank_access<1>.exit"   --->   Operation 70 'br' 'br_ln0' <Predicate = (writing_read)> <Delay = 1.29>
+
+State 2 <SV = 1> <Delay = 4.06>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_115_3, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 71 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_115_2, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 72 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_115_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 73 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_115_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 74 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_0_3, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 75 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_0_2, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 76 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_0_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 77 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_0_0, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 78 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%specpipeline_ln205 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_62" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 79 'specpipeline' 'specpipeline_ln205' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%specmemcore_ln211 = specmemcore void @_ssdm_op_SpecMemCore, i16 %memory_0_0, i16 %memory_0_1, i16 %memory_0_2, i16 %memory_0_3, i16 %memory_115_0, i16 %memory_115_1, i16 %memory_115_2, i16 %memory_115_3, i64 666, i64 30, i64 18446744073709551615" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:211]   --->   Operation 80 'specmemcore' 'specmemcore_ln211' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 81 [1/2] (2.77ns)   --->   "%memory_0_0_load = load i11 %memory_0_0_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 81 'load' 'memory_0_0_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 82 [1/2] (2.77ns)   --->   "%memory_0_0_load_1 = load i11 %memory_0_0_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 82 'load' 'memory_0_0_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 83 [1/2] (2.77ns)   --->   "%memory_115_0_load = load i11 %memory_115_0_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 83 'load' 'memory_115_0_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 84 [1/2] (2.77ns)   --->   "%memory_115_0_load_1 = load i11 %memory_115_0_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 84 'load' 'memory_115_0_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 85 [1/2] (2.77ns)   --->   "%memory_0_1_load = load i11 %memory_0_1_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 85 'load' 'memory_0_1_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 86 [1/2] (2.77ns)   --->   "%memory_0_1_load_1 = load i11 %memory_0_1_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 86 'load' 'memory_0_1_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 87 [1/2] (2.77ns)   --->   "%memory_115_1_load = load i11 %memory_115_1_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 87 'load' 'memory_115_1_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 88 [1/2] (2.77ns)   --->   "%memory_115_1_load_1 = load i11 %memory_115_1_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 88 'load' 'memory_115_1_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 89 [1/2] (2.77ns)   --->   "%memory_0_2_load = load i11 %memory_0_2_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 89 'load' 'memory_0_2_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 90 [1/2] (2.77ns)   --->   "%memory_0_2_load_1 = load i11 %memory_0_2_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 90 'load' 'memory_0_2_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 91 [1/2] (2.77ns)   --->   "%memory_115_2_load = load i11 %memory_115_2_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 91 'load' 'memory_115_2_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 92 [1/2] (2.77ns)   --->   "%memory_115_2_load_1 = load i11 %memory_115_2_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 92 'load' 'memory_115_2_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 93 [1/2] (2.77ns)   --->   "%memory_0_3_load = load i11 %memory_0_3_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 93 'load' 'memory_0_3_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 94 [1/2] (2.77ns)   --->   "%memory_0_3_load_1 = load i11 %memory_0_3_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 94 'load' 'memory_0_3_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 95 [1/2] (2.77ns)   --->   "%memory_115_3_load = load i11 %memory_115_3_addr_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 95 'load' 'memory_115_3_load' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 96 [1/2] (2.77ns)   --->   "%memory_115_3_load_1 = load i11 %memory_115_3_addr_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 96 'load' 'memory_115_3_load_1' <Predicate = (!writing_read & reading_read)> <Delay = 2.77> <CoreInst = "RAM_T2P_BRAM">   --->   Core 94 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2016> <RAM>
+ST_2 : Operation 97 [1/1] (1.29ns)   --->   "%br_ln227 = br void %(anonymous namespace)bank_access<1>.exit" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:227]   --->   Operation 97 'br' 'br_ln227' <Predicate = (!writing_read & reading_read)> <Delay = 1.29>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%agg_result_v_2_2_write_assign = phi i16 0, void %.split.0.i, i16 %memory_115_2_load, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 98 'phi' 'agg_result_v_2_2_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%agg_result_v_2_3_write_assign = phi i16 0, void %.split.0.i, i16 %memory_115_3_load, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 99 'phi' 'agg_result_v_2_3_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%agg_result_v_2_1_write_assign = phi i16 0, void %.split.0.i, i16 %memory_115_1_load, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 100 'phi' 'agg_result_v_2_1_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%agg_result_v_3_0_write_assign = phi i16 0, void %.split.0.i, i16 %memory_115_0_load_1, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 101 'phi' 'agg_result_v_3_0_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%agg_result_v_3_1_write_assign = phi i16 0, void %.split.0.i, i16 %memory_115_1_load_1, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 102 'phi' 'agg_result_v_3_1_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%agg_result_v_2_0_write_assign = phi i16 0, void %.split.0.i, i16 %memory_115_0_load, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 103 'phi' 'agg_result_v_2_0_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%agg_result_v_3_2_write_assign = phi i16 0, void %.split.0.i, i16 %memory_115_2_load_1, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 104 'phi' 'agg_result_v_3_2_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%agg_result_v_3_3_write_assign = phi i16 0, void %.split.0.i, i16 %memory_115_3_load_1, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225]   --->   Operation 105 'phi' 'agg_result_v_3_3_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%agg_result_v_1_3_write_assign = phi i16 0, void %.split.0.i, i16 %memory_0_3_load_1, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 106 'phi' 'agg_result_v_1_3_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%agg_result_v_1_2_write_assign = phi i16 0, void %.split.0.i, i16 %memory_0_2_load_1, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 107 'phi' 'agg_result_v_1_2_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%agg_result_v_1_1_write_assign = phi i16 0, void %.split.0.i, i16 %memory_0_1_load_1, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 108 'phi' 'agg_result_v_1_1_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%agg_result_v_1_0_write_assign = phi i16 0, void %.split.0.i, i16 %memory_0_0_load_1, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 109 'phi' 'agg_result_v_1_0_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%agg_result_v_0_3_write_assign = phi i16 0, void %.split.0.i, i16 %memory_0_3_load, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 110 'phi' 'agg_result_v_0_3_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%agg_result_v_0_2_write_assign = phi i16 0, void %.split.0.i, i16 %memory_0_2_load, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 111 'phi' 'agg_result_v_0_2_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "%agg_result_v_0_1_write_assign = phi i16 0, void %.split.0.i, i16 %memory_0_1_load, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 112 'phi' 'agg_result_v_0_1_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%agg_result_v_0_0_write_assign = phi i16 0, void %.split.0.i, i16 %memory_0_0_load, void, i16 0, void" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224]   --->   Operation 113 'phi' 'agg_result_v_0_0_write_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 114 [1/1] (0.00ns)   --->   "%mrv_i = insertvalue i256 <undef>, i16 %agg_result_v_0_0_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 114 'insertvalue' 'mrv_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 115 [1/1] (0.00ns)   --->   "%mrv_1_i = insertvalue i256 %mrv_i, i16 %agg_result_v_0_1_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 115 'insertvalue' 'mrv_1_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%mrv_2_i = insertvalue i256 %mrv_1_i, i16 %agg_result_v_0_2_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 116 'insertvalue' 'mrv_2_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%mrv_3_i = insertvalue i256 %mrv_2_i, i16 %agg_result_v_0_3_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 117 'insertvalue' 'mrv_3_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 118 [1/1] (0.00ns)   --->   "%mrv_4_i = insertvalue i256 %mrv_3_i, i16 %agg_result_v_1_0_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 118 'insertvalue' 'mrv_4_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 119 [1/1] (0.00ns)   --->   "%mrv_5_i = insertvalue i256 %mrv_4_i, i16 %agg_result_v_1_1_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 119 'insertvalue' 'mrv_5_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%mrv_6_i = insertvalue i256 %mrv_5_i, i16 %agg_result_v_1_2_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 120 'insertvalue' 'mrv_6_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 121 [1/1] (0.00ns)   --->   "%mrv_7_i = insertvalue i256 %mrv_6_i, i16 %agg_result_v_1_3_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 121 'insertvalue' 'mrv_7_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 122 [1/1] (0.00ns)   --->   "%mrv_8_i = insertvalue i256 %mrv_7_i, i16 %agg_result_v_2_0_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 122 'insertvalue' 'mrv_8_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 123 [1/1] (0.00ns)   --->   "%mrv_9_i = insertvalue i256 %mrv_8_i, i16 %agg_result_v_2_1_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 123 'insertvalue' 'mrv_9_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 124 [1/1] (0.00ns)   --->   "%mrv_i_517 = insertvalue i256 %mrv_9_i, i16 %agg_result_v_2_2_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 124 'insertvalue' 'mrv_i_517' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 125 [1/1] (0.00ns)   --->   "%mrv_10_i = insertvalue i256 %mrv_i_517, i16 %agg_result_v_2_3_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 125 'insertvalue' 'mrv_10_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 126 [1/1] (0.00ns)   --->   "%mrv_11_i = insertvalue i256 %mrv_10_i, i16 %agg_result_v_3_0_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 126 'insertvalue' 'mrv_11_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 127 [1/1] (0.00ns)   --->   "%mrv_12_i = insertvalue i256 %mrv_11_i, i16 %agg_result_v_3_1_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 127 'insertvalue' 'mrv_12_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 128 [1/1] (0.00ns)   --->   "%mrv_13_i = insertvalue i256 %mrv_12_i, i16 %agg_result_v_3_2_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 128 'insertvalue' 'mrv_13_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 129 [1/1] (0.00ns)   --->   "%mrv_14_i = insertvalue i256 %mrv_13_i, i16 %agg_result_v_3_3_write_assign" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:228]   --->   Operation 129 'insertvalue' 'mrv_14_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 130 [1/1] (0.00ns)   --->   "%ret_ln205 = ret i256 %mrv_14_i" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205]   --->   Operation 130 'ret' 'ret_ln205' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.67ns, clock uncertainty: 0.8ns.
+
+ <State 1>: 2.77ns
+The critical path consists of the following:
+	wire read on port 'a0' (F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:205) [30]  (0 ns)
+	'getelementptr' operation ('memory_0_0_addr_1', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224) [44]  (0 ns)
+	'load' operation ('memory_0_0_load', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:224) on array 'memory_0_0' [45]  (2.77 ns)
+
+ <State 2>: 4.07ns
+The critical path consists of the following:
+	'load' operation ('memory_115_2_load', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225) on array 'memory_115_2' [65]  (2.77 ns)
+	multiplexor before 'phi' operation ('agg.result.v[2][2]', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225) with incoming values : ('memory_115_2_load', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225) [101]  (1.3 ns)
+	'phi' operation ('agg.result.v[2][2]', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225) with incoming values : ('memory_115_2_load', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:225) [101]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

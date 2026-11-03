@@ -1,0 +1,31 @@
+{
+  "ranges": {
+    "a.input": 0.99609375,
+    "a.features.0": 1.2768638134002686,
+    "a.features.3": 2.381232976913452,
+    "a.features.6": 7.641162872314453,
+    "a.features.9": 41.050758361816406,
+    "r.input": 2.640000104904175,
+    "r.conv1": 3.6983299255371094,
+    "r.layer1.0.conv1": 2.225773572921753,
+    "r.layer1.0.conv2": 4.783729553222656,
+    "r.layer1.1.conv1": 2.5080490112304688,
+    "r.layer1.1.conv2": 6.749568939208984,
+    "r.layer2.0.conv1": 3.049164056777954,
+    "r.layer2.0.conv2": 4.145058631896973,
+    "r.layer2.1.conv1": 2.644517421722412,
+    "r.layer2.1.conv2": 5.933967590332031,
+    "r.layer3.0.conv1": 3.0478858947753906,
+    "r.layer3.0.conv2": 4.402853488922119,
+    "r.layer3.1.conv1": 2.5862042903900146,
+    "r.layer3.1.conv2": 3.9817116260528564,
+    "r.layer4.0.conv1": 2.0548079013824463,
+    "r.layer4.0.conv2": 5.437873840332031,
+    "r.layer4.1.conv1": 1.969254732131958,
+    "r.layer4.1.conv2": 28.84804916381836
+  },
+  "seed": 20261024,
+  "calibration_margin": 1.05,
+  "selection_policy": "INT16 accepted if no train-side class flips and max pD/pS error <=0.005; INT8 assessed only, RTL remains INT16",
+  "evaluation_boundary": "Existing 40-person development set; not independent clinical validation"
+}

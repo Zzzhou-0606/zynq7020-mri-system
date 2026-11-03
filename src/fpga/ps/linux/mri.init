@@ -1,0 +1,91 @@
+#!/bin/sh
+# MRI system startup. Each process has a distinct pid and log; no file cleanup.
+set -eu
+test ! -r /etc/default/mri || . /etc/default/mri
+MRI_STORAGE_MOUNT="${MRI_STORAGE_MOUNT:-/mnt/mri-data}"
+MRI_TASK_ROOT="${MRI_TASK_ROOT:-$MRI_STORAGE_MOUNT/tasks}"
+MRI_BACKEND="${MRI_BACKEND:-pl}"
+MRI_BIND="${MRI_BIND:-0.0.0.0}"
+MRI_PORT="${MRI_PORT:-8080}"
+MRI_STORAGE_MIB="${MRI_STORAGE_MIB:-512}"
+export MRI_TASK_ROOT
+TZ="${MRI_TIMEZONE:-CST-8}"
+export TZ
+mkdir -p /run/mri /var/log/mri
+running() {
+    test -r "$1" || return 1
+    pid=$(cat "$1")
+    case "$pid" in ''|*[!0-9]*) return 1 ;; esac
+    test -r "/proc/$pid/cmdline" && tr '\000' ' ' < "/proc/$pid/cmdline" | grep -q '/opt/mri/'
+}
+storage_ready() {
+    awk -v target="$MRI_STORAGE_MOUNT" '$2 == target {found=1} END {exit !found}' /proc/mounts
+}
+sd_ready() {
+    # Require the configured SD block device, a real mount and write access.
+    # A directory on the RAM root alone must never enable task uploads.
+    test -b "${MRI_SD_DEVICE:-/dev/mmcblk0p1}" &&
+    awk -v target="$MRI_SD_MOUNT" -v device="${MRI_SD_DEVICE:-/dev/mmcblk0p1}" \
+        '$1 == device && $2 == target && $4 ~ /(^|,)rw(,|$)/ {found=1} END {exit !found}' /proc/mounts
+}
+prepare_storage() {
+    storage_ready && return 0
+    if test -b "${MRI_DATA_DEVICE:-/dev/disk/by-label/mri-data}"; then
+        mkdir -p "$MRI_STORAGE_MOUNT"
+        mount "${MRI_DATA_DEVICE:-/dev/disk/by-label/mri-data}" "$MRI_STORAGE_MOUNT"
+        return
+    fi
+    if test -n "${MRI_SD_MOUNT:-}"; then
+        # udev may still be mounting the boot partition when S99mri runs.
+        attempts=0
+        until sd_ready; do
+            attempts=$((attempts + 1))
+            if test "$attempts" -ge 10; then break; fi
+            sleep 1
+        done
+        if sd_ready; then
+            # Refuse symlinks so a data directory cannot redirect writes to RAM.
+            if test -L "$MRI_SD_MOUNT/mri-data" || test -L "$MRI_STORAGE_MOUNT"; then
+                echo 'MRI data paths must not be symbolic links.' >&2
+                return 1
+            fi
+            mkdir -p "$MRI_SD_MOUNT/mri-data" "$MRI_STORAGE_MOUNT"
+            mount --bind "$MRI_SD_MOUNT/mri-data" "$MRI_STORAGE_MOUNT"
+        fi
+    fi
+    if ! storage_ready; then
+        echo "Mount persistent MRI storage at $MRI_STORAGE_MOUNT before starting." >&2
+        return 1
+    fi
+}
+case "${1:-start}" in
+start)
+    # Local UTC hardware clock restores wall time before new task timestamps.
+    if ! running /run/mri/service.pid; then
+        /usr/bin/python3 /opt/mri/bin/mri_board_peripherals.py restore-rtc >> /var/log/mri/peripherals.log 2>&1 || true
+    fi
+    if ! running /run/mri/ui.pid; then
+        /opt/mri/bin/start-mri-ui.sh >> /var/log/mri/ui.log 2>&1 &
+        echo $! > /run/mri/ui.pid
+    fi
+    prepare_storage
+    if ! running /run/mri/service.pid; then
+        /usr/bin/python3 /opt/mri/service/mri_service.py --root "$MRI_TASK_ROOT" \
+          --runtime /opt/mri/bin/mri_infer --model /opt/mri/models/model.bin \
+          --backend "$MRI_BACKEND" --bind "$MRI_BIND" --port "$MRI_PORT" \
+          --storage-mount "$MRI_STORAGE_MOUNT" \
+          --storage-limit-mib "$MRI_STORAGE_MIB" >> /var/log/mri/service.log 2>&1 &
+        echo $! > /run/mri/service.pid
+    fi
+    ;;
+stop)
+    for pidfile in /run/mri/service.pid /run/mri/ui.pid; do
+        if running "$pidfile"; then kill "$(cat "$pidfile")"; fi
+    done
+    ;;
+status)
+    running /run/mri/service.pid && echo 'MRI service running' || echo 'MRI service stopped'
+    running /run/mri/ui.pid && echo 'MRI UI running' || echo 'MRI UI stopped'
+    ;;
+*) echo 'Usage: /etc/init.d/mri {start|stop|status}' >&2; exit 2 ;;
+esac

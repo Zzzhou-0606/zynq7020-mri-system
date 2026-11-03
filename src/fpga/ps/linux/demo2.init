@@ -1,0 +1,13 @@
+#!/bin/sh
+# Local development GUI. Serial login remains available if display startup fails.
+case "$1" in
+    start)
+        mkdir -p /run/demo2
+        start-stop-daemon --start --background --make-pidfile --pidfile /run/demo2/gui.pid \
+            --startas /bin/sh -- -c 'exec /opt/demo2/start-demo.sh >>/run/demo2/gui.log 2>&1'
+        ;;
+    stop)
+        start-stop-daemon --stop --pidfile /run/demo2/gui.pid --exec /opt/demo2/demo2 || true
+        ;;
+    *) echo "Usage: $0 start|stop" >&2; exit 1 ;;
+esac

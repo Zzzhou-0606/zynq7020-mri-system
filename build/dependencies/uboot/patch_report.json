@@ -1,0 +1,7 @@
+{
+  "dtb_offset": 782788,
+  "dtb_allocation": 29025,
+  "only_property_change": "/amba/ethernet@e000c000/status = disabled",
+  "source_sha256": "fb690bd726a488ae6ebd4253ce97c268cfa21a2a73b16fd64110daa085bf883b",
+  "output_sha256": "8b5a6f1a5c7596838d28b83f853e9127aad56767cf9268227c68b180b00760da"
+}

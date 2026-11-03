@@ -1,0 +1,14 @@
+{
+  "system_variant": "mri_full_overlap",
+  "runtime_variant": "overlap-v1",
+  "accelerator_abi": 6,
+  "model_container_abi": 2,
+  "precision": "int16",
+  "target_clock_mhz": 125,
+  "expected_hardware_id": "0x46554c4c",
+  "control_base": "0x43c50000",
+  "identity_base": "0x43c60000",
+  "quantization_version": "frozen-int16-20261024-v2",
+  "board_validation": "passed_reboot_and_official_http_classification",
+  "network_task_id": "4494ef5a-4f5a-4e35-8568-84e8bef8e9bf"
+}

@@ -1,0 +1,51 @@
+{
+  "stage": "board_dma",
+  "status": "pass",
+  "environment": {
+    "python": "3.8.2 (default, Mar 13 2020, 10:14:16) \n[GCC 9.3.0]",
+    "platform": "Linux-5.4.0-xilinx-v2020.2-armv7l-with-glibc2.29",
+    "machine": "armv7l",
+    "numpy": "1.20.3",
+    "pynq": "2.7.0"
+  },
+  "dma": "axi_dma_affine",
+  "contract": {
+    "tx_bytes": 16380,
+    "rx_bytes": 16380,
+    "length_limit_bytes": 16383
+  },
+  "timeout_s": 3,
+  "input_shape": [
+    4095
+  ],
+  "output_shape": [
+    4095
+  ],
+  "input_dtype": "uint32",
+  "output_dtype": "uint32",
+  "accelerator": null,
+  "atol": 0.0,
+  "rtol": 0.0,
+  "completed_registers": {
+    "mm2s_status": 4098,
+    "s2mm_status": 4098,
+    "mm2s_length": 16380,
+    "s2mm_length": 16380
+  },
+  "transfer_wall_ms": 1.1370089996489696,
+  "received_bytes": 16380,
+  "comparison": {
+    "pass": true,
+    "elements": 4095,
+    "mismatches": 0,
+    "max_abs_error": 0,
+    "first_bad_index": null,
+    "atol": 0.0,
+    "rtol": 0.0
+  },
+  "source": "qt_demo",
+  "path": "affine",
+  "bitfile": "qt_dual.bit",
+  "recorded_at": "2026-10-25",
+  "vectors_file": "case_21_affine.npz"
+}

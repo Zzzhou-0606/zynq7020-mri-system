@@ -1,0 +1,45 @@
+{
+  "version": "frozen-training-20261022-v1",
+  "seed": 20261023,
+  "optimizer": "Adam",
+  "class_weighting": "n/(2*class_count); weighted per-example CE averaged over batch",
+  "normalization_percentiles": [
+    1,
+    99
+  ],
+  "epochs_policy": "fixed previously selected epochs; no new selection",
+  "branches": {
+    "a": {
+      "epochs": 169,
+      "fit_n": 78,
+      "group": "a_fit",
+      "batch_sessions": 4,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0
+    },
+    "b": {
+      "epochs": 12,
+      "fit_n": 158,
+      "group": "bc_refit",
+      "batch_sessions": 4,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0
+    },
+    "c": {
+      "epochs": 6,
+      "fit_n": 158,
+      "group": "bc_refit",
+      "batch_sessions": 4,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0
+    },
+    "s": {
+      "epochs": 2,
+      "fit_n": 80,
+      "group": "s_refit",
+      "batch_sessions": 4,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01
+    }
+  }
+}

@@ -1,0 +1,2 @@
+# Install the complete source environment; torch/torchvision via setup_source.ps1.
+-r ../../build/environment/requirements.txt

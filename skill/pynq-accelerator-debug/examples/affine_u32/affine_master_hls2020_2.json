@@ -1,0 +1,11 @@
+{
+  "protocol": "ap_ctrl_hs",
+  "control_offset": 0,
+  "pointers": {
+    "x": {"offset": 16, "width_bits": 64},
+    "y": {"offset": 28, "width_bits": 64}
+  },
+  "scalar_writes": [[40, 100]],
+  "example_n": 100,
+  "example_n_offset": 40
+}

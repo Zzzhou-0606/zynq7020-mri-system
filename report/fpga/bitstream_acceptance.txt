@@ -1,0 +1,5 @@
+clock_mhz=125
+setup_slack_ns=0.131
+hold_slack_ns=0.012
+identity=0x46554c4c
+board_tested=true

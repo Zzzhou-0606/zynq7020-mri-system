@@ -1,0 +1,16 @@
+# ==============================================================
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+# Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+# ==============================================================
+OPTION psf_version = 2.1;
+
+BEGIN driver mri_slice_v4
+
+ OPTION supported_peripherals = (mri_slice_v4_v4_0 );
+ OPTION driver_state = ACTIVE;
+ OPTION copyfiles = all;
+ OPTION name = mri_slice_v4;
+ OPTION version = 4.0;
+
+END driver
+

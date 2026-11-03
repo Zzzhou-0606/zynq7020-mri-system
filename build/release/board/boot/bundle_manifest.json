@@ -1,0 +1,36 @@
+{
+  "system_variant": "mri_full_overlap",
+  "runtime_variant": "overlap-v1",
+  "accelerator_abi": 6,
+  "model_container_abi": 2,
+  "precision": "int16",
+  "target_clock_mhz": 125,
+  "expected_hardware_id": "0x46554c4c",
+  "control_base": "0x43c50000",
+  "identity_base": "0x43c60000",
+  "quantization_version": "frozen-int16-20261024-v2",
+  "release_id": "mri_full_overlap_125mhz_20261102",
+  "board_validation": "passed",
+  "files": {
+    "BOOT.BIN": {
+      "bytes": 4896104,
+      "sha256": "116b873e63075f6a959f2b3e20665d7f1f79b9242d1a5e4f5707e0d5e751d986"
+    },
+    "boot.scr": {
+      "bytes": 645,
+      "sha256": "c09c565e705f85c15df2a541fc4718011a1adc180936f9b578635f876fe138db"
+    },
+    "zImage": {
+      "bytes": 4830360,
+      "sha256": "dbcc444a47a6f3f622dee984fdac1c4c266914bed878e471c44d3b9b232d8586"
+    },
+    "system.dtb": {
+      "bytes": 17114,
+      "sha256": "718f841662e0f0185592de1a63f6a8c0f17277a621fd86e5e29b582464451594"
+    },
+    "rootfs-mri.cpio.gz": {
+      "bytes": 167136652,
+      "sha256": "0ebe7c75b956a60c03fc5b47caa479b20efa9af2f147739298c402e334e5ca92"
+    }
+  }
+}

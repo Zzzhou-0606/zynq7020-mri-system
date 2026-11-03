@@ -1,0 +1,208 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_address_stage'
+================================================================
+* Date:           Sun Nov  1 11:06:39 2026
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        hls_full_r5
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  6.447 ns|     0.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2|  13.334 ns|  13.334 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.56>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%wi_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %wi" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232]   --->   Operation 4 'read' 'wi_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%pad_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %pad" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232]   --->   Operation 5 'read' 'pad_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%stride_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %stride" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232]   --->   Operation 6 'read' 'stride_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%kx_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %kx" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232]   --->   Operation 7 'read' 'kx_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%ky_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %ky" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232]   --->   Operation 8 'read' 'ky_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%y_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %y" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232]   --->   Operation 9 'read' 'y_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%x_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %x" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232]   --->   Operation 10 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln232 = zext i2 %pad_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232]   --->   Operation 11 'zext' 'zext_ln232' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln232_1 = zext i2 %stride_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232]   --->   Operation 12 'zext' 'zext_ln232_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln243 = zext i2 %stride_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 13 'zext' 'zext_ln243' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [3/3] (0.98ns) (grouped into DSP with root node add_ln243)   --->   "%mul_ln243 = mul i11 %zext_ln243, i11 %y_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 14 'mul' 'mul_ln243' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 15 [3/3] (0.98ns) (grouped into DSP with root node xx)   --->   "%mul_ln242 = mul i16 %zext_ln232_1, i16 %x_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 15 'mul' 'mul_ln242' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 16 [1/1] (1.54ns)   --->   "%sub_ln242 = sub i16 %kx_read, i16 %zext_ln232" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 16 'sub' 'sub_ln242' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (1.58ns) (grouped into DSP with root node xx_1)   --->   "%add_ln242 = add i16 %x_read, i16 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 17 'add' 'add_ln242' <Predicate = true> <Delay = 1.58> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 18 [3/3] (0.98ns) (grouped into DSP with root node xx_1)   --->   "%mul_ln242_1 = mul i16 %add_ln242, i16 %zext_ln232_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 18 'mul' 'mul_ln242_1' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 19 [1/1] (1.58ns) (grouped into DSP with root node xx_2)   --->   "%add_ln242_2 = add i16 %x_read, i16 2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 19 'add' 'add_ln242_2' <Predicate = true> <Delay = 1.58> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 20 [3/3] (0.98ns) (grouped into DSP with root node xx_2)   --->   "%mul_ln242_2 = mul i16 %add_ln242_2, i16 %zext_ln232_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 20 'mul' 'mul_ln242_2' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 21 [1/1] (1.58ns) (grouped into DSP with root node xx_3)   --->   "%add_ln242_4 = add i16 %x_read, i16 3" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 21 'add' 'add_ln242_4' <Predicate = true> <Delay = 1.58> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 22 [3/3] (0.98ns) (grouped into DSP with root node xx_3)   --->   "%mul_ln242_3 = mul i16 %add_ln242_4, i16 %zext_ln232_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 22 'mul' 'mul_ln242_3' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 2 <SV = 1> <Delay = 0.98>
+ST_2 : Operation 23 [2/3] (0.98ns) (grouped into DSP with root node add_ln243)   --->   "%mul_ln243 = mul i11 %zext_ln243, i11 %y_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 23 'mul' 'mul_ln243' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 24 [2/3] (0.98ns) (grouped into DSP with root node xx)   --->   "%mul_ln242 = mul i16 %zext_ln232_1, i16 %x_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 24 'mul' 'mul_ln242' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 25 [2/3] (0.98ns) (grouped into DSP with root node xx_1)   --->   "%mul_ln242_1 = mul i16 %add_ln242, i16 %zext_ln232_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 25 'mul' 'mul_ln242_1' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 26 [2/3] (0.98ns) (grouped into DSP with root node xx_2)   --->   "%mul_ln242_2 = mul i16 %add_ln242_2, i16 %zext_ln232_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 26 'mul' 'mul_ln242_2' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 27 [2/3] (0.98ns) (grouped into DSP with root node xx_3)   --->   "%mul_ln242_3 = mul i16 %add_ln242_4, i16 %zext_ln232_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 27 'mul' 'mul_ln242_3' <Predicate = true> <Delay = 0.98> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 6.44>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%specpipeline_ln232 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_62" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232]   --->   Operation 28 'specpipeline' 'specpipeline_ln232' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%speclatency_ln232 = speclatency void @_ssdm_op_SpecLatency, i64 2, i64 2, void @empty_62" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232]   --->   Operation 29 'speclatency' 'speclatency_ln232' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln243_1 = zext i16 %wi_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 30 'zext' 'zext_ln243_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/3] (0.00ns) (grouped into DSP with root node add_ln243)   --->   "%mul_ln243 = mul i11 %zext_ln243, i11 %y_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 31 'mul' 'mul_ln243' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 32 [1/1] (2.73ns) (root node of the DSP)   --->   "%add_ln243 = add i11 %mul_ln243, i11 %ky_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 32 'add' 'add_ln243' <Predicate = true> <Delay = 2.73> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%trunc_ln243 = trunc i11 %add_ln243" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 33 'trunc' 'trunc_ln243' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i8.i8, i8 %trunc_ln243, i8 0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 34 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%shl_ln243_1 = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i11.i5, i11 %add_ln243, i5 0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 35 'bitconcatenate' 'shl_ln243_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (1.54ns)   --->   "%sub_ln243 = sub i16 %shl_ln, i16 %shl_ln243_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 36 'sub' 'sub_ln243' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 37 [1/3] (0.00ns) (grouped into DSP with root node xx)   --->   "%mul_ln242 = mul i16 %zext_ln232_1, i16 %x_read" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 37 'mul' 'mul_ln242' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 38 [1/1] (2.73ns) (root node of the DSP)   --->   "%xx = add i16 %sub_ln242, i16 %mul_ln242" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 38 'add' 'xx' <Predicate = true> <Delay = 2.73> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%sext_ln242 = sext i16 %xx" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 39 'sext' 'sext_ln242' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node result_valid_0)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %xx, i32 15" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 40 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node result_valid_0)   --->   "%xor_ln242 = xor i1 %tmp, i1 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 41 'xor' 'xor_ln242' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (2.13ns)   --->   "%icmp_ln242 = icmp_slt  i17 %sext_ln242, i17 %zext_ln243_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 42 'icmp' 'icmp_ln242' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.80ns) (out node of the LUT)   --->   "%result_valid_0 = and i1 %icmp_ln242, i1 %xor_ln242" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 43 'and' 'result_valid_0' <Predicate = true> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (1.54ns)   --->   "%add_ln243_1 = add i16 %sub_ln243, i16 %xx" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 44 'add' 'add_ln243_1' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.62ns)   --->   "%result_a_0 = select i1 %result_valid_0, i16 %add_ln243_1, i16 0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 45 'select' 'result_a_0' <Predicate = true> <Delay = 0.62> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 46 [1/3] (0.00ns) (grouped into DSP with root node xx_1)   --->   "%mul_ln242_1 = mul i16 %add_ln242, i16 %zext_ln232_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 46 'mul' 'mul_ln242_1' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 47 [1/1] (2.73ns) (root node of the DSP)   --->   "%xx_1 = add i16 %sub_ln242, i16 %mul_ln242_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 47 'add' 'xx_1' <Predicate = true> <Delay = 2.73> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%sext_ln242_1 = sext i16 %xx_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 48 'sext' 'sext_ln242_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node result_valid_1)   --->   "%tmp_45 = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %xx_1, i32 15" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 49 'bitselect' 'tmp_45' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node result_valid_1)   --->   "%xor_ln242_1 = xor i1 %tmp_45, i1 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 50 'xor' 'xor_ln242_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [1/1] (2.13ns)   --->   "%icmp_ln242_1 = icmp_slt  i17 %sext_ln242_1, i17 %zext_ln243_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 51 'icmp' 'icmp_ln242_1' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (0.80ns) (out node of the LUT)   --->   "%result_valid_1 = and i1 %icmp_ln242_1, i1 %xor_ln242_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 52 'and' 'result_valid_1' <Predicate = true> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [1/1] (1.54ns)   --->   "%add_ln243_2 = add i16 %sub_ln243, i16 %xx_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 53 'add' 'add_ln243_2' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (0.62ns)   --->   "%result_a_1 = select i1 %result_valid_1, i16 %add_ln243_2, i16 0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 54 'select' 'result_a_1' <Predicate = true> <Delay = 0.62> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 55 [1/3] (0.00ns) (grouped into DSP with root node xx_2)   --->   "%mul_ln242_2 = mul i16 %add_ln242_2, i16 %zext_ln232_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 55 'mul' 'mul_ln242_2' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 56 [1/1] (2.73ns) (root node of the DSP)   --->   "%xx_2 = add i16 %sub_ln242, i16 %mul_ln242_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 56 'add' 'xx_2' <Predicate = true> <Delay = 2.73> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%sext_ln242_2 = sext i16 %xx_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 57 'sext' 'sext_ln242_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns) (grouped into LUT with out node result_valid_2)   --->   "%tmp_46 = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %xx_2, i32 15" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 58 'bitselect' 'tmp_46' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns) (grouped into LUT with out node result_valid_2)   --->   "%xor_ln242_2 = xor i1 %tmp_46, i1 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 59 'xor' 'xor_ln242_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 60 [1/1] (2.13ns)   --->   "%icmp_ln242_2 = icmp_slt  i17 %sext_ln242_2, i17 %zext_ln243_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 60 'icmp' 'icmp_ln242_2' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 61 [1/1] (0.80ns) (out node of the LUT)   --->   "%result_valid_2 = and i1 %icmp_ln242_2, i1 %xor_ln242_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 61 'and' 'result_valid_2' <Predicate = true> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 62 [1/1] (1.54ns)   --->   "%add_ln243_3 = add i16 %sub_ln243, i16 %xx_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 62 'add' 'add_ln243_3' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 63 [1/1] (0.62ns)   --->   "%result_a_2 = select i1 %result_valid_2, i16 %add_ln243_3, i16 0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 63 'select' 'result_a_2' <Predicate = true> <Delay = 0.62> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 64 [1/3] (0.00ns) (grouped into DSP with root node xx_3)   --->   "%mul_ln242_3 = mul i16 %add_ln242_4, i16 %zext_ln232_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 64 'mul' 'mul_ln242_3' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 65 [1/1] (2.73ns) (root node of the DSP)   --->   "%xx_3 = add i16 %sub_ln242, i16 %mul_ln242_3" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 65 'add' 'xx_3' <Predicate = true> <Delay = 2.73> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 2> <II = 1> <Delay = 3.27> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%sext_ln242_3 = sext i16 %xx_3" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 66 'sext' 'sext_ln242_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node result_valid_3)   --->   "%tmp_47 = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %xx_3, i32 15" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 67 'bitselect' 'tmp_47' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns) (grouped into LUT with out node result_valid_3)   --->   "%xor_ln242_3 = xor i1 %tmp_47, i1 1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 68 'xor' 'xor_ln242_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [1/1] (2.13ns)   --->   "%icmp_ln242_3 = icmp_slt  i17 %sext_ln242_3, i17 %zext_ln243_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 69 'icmp' 'icmp_ln242_3' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [1/1] (0.80ns) (out node of the LUT)   --->   "%result_valid_3 = and i1 %icmp_ln242_3, i1 %xor_ln242_3" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242]   --->   Operation 70 'and' 'result_valid_3' <Predicate = true> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 71 [1/1] (1.54ns)   --->   "%add_ln243_4 = add i16 %sub_ln243, i16 %xx_3" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 71 'add' 'add_ln243_4' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 72 [1/1] (0.62ns)   --->   "%result_a_3 = select i1 %result_valid_3, i16 %add_ln243_4, i16 0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243]   --->   Operation 72 'select' 'result_a_3' <Predicate = true> <Delay = 0.62> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%mrv = insertvalue i68 <undef>, i16 %result_a_0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:245]   --->   Operation 73 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i68 %mrv, i16 %result_a_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:245]   --->   Operation 74 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i68 %mrv_1, i16 %result_a_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:245]   --->   Operation 75 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i68 %mrv_2, i16 %result_a_3" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:245]   --->   Operation 76 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue i68 %mrv_3, i1 %result_valid_0" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:245]   --->   Operation 77 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue i68 %mrv_4, i1 %result_valid_1" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:245]   --->   Operation 78 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue i68 %mrv_5, i1 %result_valid_2" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:245]   --->   Operation 79 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue i68 %mrv_6, i1 %result_valid_3" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:245]   --->   Operation 80 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%ret_ln245 = ret i68 %mrv_7" [F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:245]   --->   Operation 81 'ret' 'ret_ln245' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.67ns, clock uncertainty: 0.8ns.
+
+ <State 1>: 2.56ns
+The critical path consists of the following:
+	wire read on port 'x' (F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:232) [14]  (0 ns)
+	'add' operation of DSP[39] ('add_ln242', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242) [37]  (1.58 ns)
+	'mul' operation of DSP[39] ('mul_ln242_1', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:242) [38]  (0.98 ns)
+
+ <State 2>: 0.98ns
+The critical path consists of the following:
+	'mul' operation of DSP[22] ('mul_ln243', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243) [21]  (0.98 ns)
+
+ <State 3>: 6.45ns
+The critical path consists of the following:
+	'mul' operation of DSP[22] ('mul_ln243', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243) [21]  (0 ns)
+	'add' operation of DSP[22] ('add_ln243', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243) [22]  (2.73 ns)
+	'sub' operation ('sub_ln243', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243) [26]  (1.54 ns)
+	'add' operation ('add_ln243_1', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243) [35]  (1.54 ns)
+	'select' operation ('result.a[0]', F:/mri_fpga_delivery_20261025/src/fpga/pl/hls/cnn_v5/mri_full.cpp:243) [36]  (0.627 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

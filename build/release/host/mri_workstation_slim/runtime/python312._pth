@@ -1,0 +1,6 @@
+DLLs
+Lib
+Lib/site-packages
+app
+app/host/segmentation/vendor/FastSurfer
+import site

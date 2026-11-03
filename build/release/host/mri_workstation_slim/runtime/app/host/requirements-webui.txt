@@ -1,0 +1,2 @@
+# Additional desktop presentation dependency. Existing scientific packages stay unchanged.
+pywebview>=6.2,<7

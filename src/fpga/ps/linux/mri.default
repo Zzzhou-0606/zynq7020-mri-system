@@ -1,0 +1,16 @@
+# Set MRI_TASK_ROOT to a persistent Linux filesystem if task history must survive reboot.
+# A RAM-root image stores /var in RAM. There is no automatic deletion or queue on the board.
+MRI_STORAGE_MOUNT=/mnt/mri-data
+MRI_DATA_DEVICE=/dev/disk/by-label/mri-data
+# This demo board already automounts its writable SD boot partition here.
+# If no labelled data partition exists, bind only its mri-data subdirectory.
+# Set MRI_SD_MOUNT empty to require a separate labelled data partition.
+MRI_SD_MOUNT=/media/sd-mmcblk0p1
+MRI_SD_DEVICE=/dev/mmcblk0p1
+MRI_TASK_ROOT=/mnt/mri-data/tasks
+MRI_BACKEND=pl
+MRI_BIND=0.0.0.0
+MRI_PORT=8080
+MRI_STORAGE_MIB=512
+# Presentation only. Epoch timestamps and the hardware RTC always remain UTC.
+MRI_TIMEZONE=CST-8

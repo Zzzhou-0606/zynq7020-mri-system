@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-store">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+<title>我的 MRI 报告</title>
+<link rel="stylesheet" href="/patient/styles.css">
+<script src="/patient/app.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/patient/" aria-label="MRI 患者报告首页"><span class="brand-mark" aria-hidden="true">M</span><span><strong>MRI 影像中心</strong><small>患者报告 · 本人查阅</small></span></a><div id="session-tools" hidden><span class="access-badge">本人报告</span><button id="logout" class="secondary">退出登录</button></div></header>
+<main>
+<section id="login-view" class="login-layout" aria-labelledby="login-title">
+ <div class="welcome"><span class="eyebrow">MY MRI REPORT</span><h1>您的影像与分析，<br>清晰呈现。</h1><p>使用病人编号和独立访问码，查看本人的 MRI 分析记录与脑区影像。</p><div class="welcome-visual" aria-hidden="true"><svg viewBox="0 0 480 240"><rect x="78" y="26" width="324" height="188" rx="22" fill="#fff" stroke="#d6e3f8"/><rect x="94" y="42" width="136" height="156" rx="14" fill="#edf3fc"/><path d="M163 65c-31 0-50 27-45 54-17 16-4 48 18 47 7 21 44 21 51 0 27-1 35-30 20-47 6-29-15-54-44-54Z" fill="#bbd0f5"/><path d="M163 70v100m-24-82c-15 15-13 31-1 40m47-40c14 15 11 31-2 40m-57 17c12-6 24-1 26 10m46-10c-12-6-24-1-26 10" fill="none" stroke="#789fdc" stroke-width="5" stroke-linecap="round"/><path d="M143 139c-10-8-16-1-12 8 4 8 14 8 17 3m32-11c10-8 16-1 12 8-4 8-14 8-17 3" fill="#f6b56c"/><rect x="250" y="64" width="107" height="10" rx="5" fill="#dce7f8"/><rect x="250" y="87" width="78" height="7" rx="3" fill="#e9eff8"/><rect x="250" y="119" width="128" height="33" rx="9" fill="#edf3ff"/><path d="M261 140h13l7-13 9 19 8-12h23" fill="none" stroke="#2864e9" stroke-width="3"/><rect x="250" y="170" width="70" height="7" rx="3" fill="#e9eff8"/></svg></div><div class="welcome-note"><span class="dot"></span>仅可查阅本人记录</div></div>
+ <form id="login-form" class="card login-card"><span class="eyebrow">PATIENT ACCESS</span><h2 id="login-title">查看我的报告</h2><p class="muted">请输入医生提供的登录信息。</p><label for="case-id">病人编号</label><input id="case-id" name="case_id" required maxlength="80" autocomplete="username" spellcheck="false" placeholder="例如 OAS1_0001"><label for="access-code">访问码</label><input id="access-code" name="access_code" type="password" required maxlength="256" autocomplete="off" spellcheck="false" placeholder="输入独立访问码"><p id="login-message" class="message" role="status" aria-live="polite"></p><button id="login-submit" class="primary full" type="submit">登录并查看报告 <span aria-hidden="true">→</span></button><p class="form-note">访问码由医生单独提供；如遗失，请联系医生。</p></form>
+</section>
+<section id="report-view" hidden aria-label="我的分析报告">
+ <div class="page-heading"><div><span class="eyebrow">PERSONAL REPORT</span><h1>我的 MRI 报告</h1><p>病人编号 <strong id="patient-id"></strong></p></div><button id="refresh" class="secondary">刷新报告</button></div>
+ <div class="card report-picker"><div><label for="report-select">选择分析记录</label><span id="report-count" class="muted"></span></div><select id="report-select" aria-label="选择本人的分析记录"></select></div>
+ <p id="page-message" class="message" role="status" aria-live="polite"></p>
+ <div id="empty-reports" class="card empty-state" hidden><span class="empty-symbol" aria-hidden="true">◷</span><h2>暂时没有可查看的报告</h2><p>分析完成后，医生会将报告提供给您。</p></div>
+ <div id="report-content" hidden>
+  <article class="card result-hero"><div><span class="eyebrow">模型分类结果</span><h2 id="classification">—</h2><p id="report-date" class="muted"></p></div><div class="score-block"><span>痴呆倾向模型评分</span><div><strong id="score">—</strong><small> / 100</small></div><p>一级融合分数 × 100</p></div></article>
+  <div class="metric-grid"><article class="card metric"><span>左侧海马体积</span><div><strong id="left-volume">—</strong><small>mm³</small></div><p id="left-ratio">占脑实质：—</p></article><article class="card metric"><span>右侧海马体积</span><div><strong id="right-volume">—</strong><small>mm³</small></div><p id="right-ratio">占脑实质：—</p></article><article class="card metric"><span>二级分类分数</span><div><strong id="severity-score">—</strong></div><p id="severity-note">等待结果</p></article></div>
+  <div class="status-row"><span id="classification-status" class="badge"></span><span id="segmentation-status" class="badge"></span><span id="measurement-note" class="muted"></span></div>
+  <section class="images-section" aria-labelledby="images-title"><div class="section-heading"><div><h2 id="images-title">脑区影像</h2><p id="images-note" class="muted">查看本次分析的关键切面。</p></div><span class="badge">MRI</span></div><div id="image-grid" class="image-grid"></div><p class="image-footnote">彩色区域为本次报告提供的脑区标注；切片编号按当前影像数据顺序显示。</p></section>
+ </div>
+ <footer class="report-footer">影像分析报告 · 模型结果供辅助查看，具体结论请咨询医生。</footer>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,213 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_row_pair_entry58'
+================================================================
+* Date:           Sun Nov  1 11:07:09 2026
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        hls_full_r5
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  2.933 ns|     0.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      1|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    171|    -|
+|Register         |        -|    -|       2|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       2|    172|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   1|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_done                    |   9|          2|    1|          2|
+    |bias10_out_blk_n           |   9|          2|    1|          2|
+    |bias11_out_blk_n           |   9|          2|    1|          2|
+    |bias12_out_blk_n           |   9|          2|    1|          2|
+    |bias13_out_blk_n           |   9|          2|    1|          2|
+    |bias14_out_blk_n           |   9|          2|    1|          2|
+    |bias8_out_blk_n            |   9|          2|    1|          2|
+    |bias9_out_blk_n            |   9|          2|    1|          2|
+    |bias_out_blk_n             |   9|          2|    1|          2|
+    |ci_out_blk_n               |   9|          2|    1|          2|
+    |computing_out_blk_n        |   9|          2|    1|          2|
+    |emitting_offset_out_blk_n  |   9|          2|    1|          2|
+    |k_out_blk_n                |   9|          2|    1|          2|
+    |ow_out1_blk_n              |   9|          2|    1|          2|
+    |ow_out_blk_n               |   9|          2|    1|          2|
+    |pad_out_blk_n              |   9|          2|    1|          2|
+    |previous_rows_out_blk_n    |   9|          2|    1|          2|
+    |stride_out_blk_n           |   9|          2|    1|          2|
+    |wi_out_blk_n               |   9|          2|    1|          2|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      | 171|         38|   19|         38|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  2|   0|    2|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+---------------------------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |             Source Object             |    C Type    |
++----------------------------+-----+-----+------------+---------------------------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  (anonymous namespace)row_pair.entry58|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  (anonymous namespace)row_pair.entry58|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  (anonymous namespace)row_pair.entry58|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  (anonymous namespace)row_pair.entry58|  return value|
+|ap_continue                 |   in|    1|  ap_ctrl_hs|  (anonymous namespace)row_pair.entry58|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  (anonymous namespace)row_pair.entry58|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  (anonymous namespace)row_pair.entry58|  return value|
+|p_read                      |   in|   48|     ap_none|                                 p_read|        scalar|
+|p_read1                     |   in|   48|     ap_none|                                p_read1|        scalar|
+|p_read2                     |   in|   48|     ap_none|                                p_read2|        scalar|
+|p_read3                     |   in|   48|     ap_none|                                p_read3|        scalar|
+|p_read4                     |   in|   48|     ap_none|                                p_read4|        scalar|
+|p_read5                     |   in|   48|     ap_none|                                p_read5|        scalar|
+|p_read6                     |   in|   48|     ap_none|                                p_read6|        scalar|
+|p_read7                     |   in|   48|     ap_none|                                p_read7|        scalar|
+|ci                          |   in|   10|     ap_none|                                     ci|        scalar|
+|wi                          |   in|   16|     ap_none|                                     wi|        scalar|
+|k                           |   in|    3|     ap_none|                                      k|        scalar|
+|stride                      |   in|    2|     ap_none|                                 stride|        scalar|
+|pad                         |   in|    2|     ap_none|                                    pad|        scalar|
+|ow                          |   in|   16|     ap_none|                                     ow|        scalar|
+|computing                   |   in|    1|     ap_none|                              computing|        scalar|
+|emitting_offset             |   in|    1|     ap_none|                        emitting_offset|        scalar|
+|previous_rows               |   in|   16|     ap_none|                          previous_rows|        scalar|
+|bias_out_din                |  out|   48|     ap_fifo|                               bias_out|       pointer|
+|bias_out_full_n             |   in|    1|     ap_fifo|                               bias_out|       pointer|
+|bias_out_write              |  out|    1|     ap_fifo|                               bias_out|       pointer|
+|bias8_out_din               |  out|   48|     ap_fifo|                              bias8_out|       pointer|
+|bias8_out_full_n            |   in|    1|     ap_fifo|                              bias8_out|       pointer|
+|bias8_out_write             |  out|    1|     ap_fifo|                              bias8_out|       pointer|
+|bias9_out_din               |  out|   48|     ap_fifo|                              bias9_out|       pointer|
+|bias9_out_full_n            |   in|    1|     ap_fifo|                              bias9_out|       pointer|
+|bias9_out_write             |  out|    1|     ap_fifo|                              bias9_out|       pointer|
+|bias10_out_din              |  out|   48|     ap_fifo|                             bias10_out|       pointer|
+|bias10_out_full_n           |   in|    1|     ap_fifo|                             bias10_out|       pointer|
+|bias10_out_write            |  out|    1|     ap_fifo|                             bias10_out|       pointer|
+|bias11_out_din              |  out|   48|     ap_fifo|                             bias11_out|       pointer|
+|bias11_out_full_n           |   in|    1|     ap_fifo|                             bias11_out|       pointer|
+|bias11_out_write            |  out|    1|     ap_fifo|                             bias11_out|       pointer|
+|bias12_out_din              |  out|   48|     ap_fifo|                             bias12_out|       pointer|
+|bias12_out_full_n           |   in|    1|     ap_fifo|                             bias12_out|       pointer|
+|bias12_out_write            |  out|    1|     ap_fifo|                             bias12_out|       pointer|
+|bias13_out_din              |  out|   48|     ap_fifo|                             bias13_out|       pointer|
+|bias13_out_full_n           |   in|    1|     ap_fifo|                             bias13_out|       pointer|
+|bias13_out_write            |  out|    1|     ap_fifo|                             bias13_out|       pointer|
+|bias14_out_din              |  out|   48|     ap_fifo|                             bias14_out|       pointer|
+|bias14_out_full_n           |   in|    1|     ap_fifo|                             bias14_out|       pointer|
+|bias14_out_write            |  out|    1|     ap_fifo|                             bias14_out|       pointer|
+|ci_out_din                  |  out|   10|     ap_fifo|                                 ci_out|       pointer|
+|ci_out_full_n               |   in|    1|     ap_fifo|                                 ci_out|       pointer|
+|ci_out_write                |  out|    1|     ap_fifo|                                 ci_out|       pointer|
+|wi_out_din                  |  out|   16|     ap_fifo|                                 wi_out|       pointer|
+|wi_out_full_n               |   in|    1|     ap_fifo|                                 wi_out|       pointer|
+|wi_out_write                |  out|    1|     ap_fifo|                                 wi_out|       pointer|
+|k_out_din                   |  out|    3|     ap_fifo|                                  k_out|       pointer|
+|k_out_full_n                |   in|    1|     ap_fifo|                                  k_out|       pointer|
+|k_out_write                 |  out|    1|     ap_fifo|                                  k_out|       pointer|
+|stride_out_din              |  out|    2|     ap_fifo|                             stride_out|       pointer|
+|stride_out_full_n           |   in|    1|     ap_fifo|                             stride_out|       pointer|
+|stride_out_write            |  out|    1|     ap_fifo|                             stride_out|       pointer|
+|pad_out_din                 |  out|    2|     ap_fifo|                                pad_out|       pointer|
+|pad_out_full_n              |   in|    1|     ap_fifo|                                pad_out|       pointer|
+|pad_out_write               |  out|    1|     ap_fifo|                                pad_out|       pointer|
+|ow_out_din                  |  out|   16|     ap_fifo|                                 ow_out|       pointer|
+|ow_out_full_n               |   in|    1|     ap_fifo|                                 ow_out|       pointer|
+|ow_out_write                |  out|    1|     ap_fifo|                                 ow_out|       pointer|
+|ow_out1_din                 |  out|   16|     ap_fifo|                                ow_out1|       pointer|
+|ow_out1_full_n              |   in|    1|     ap_fifo|                                ow_out1|       pointer|
+|ow_out1_write               |  out|    1|     ap_fifo|                                ow_out1|       pointer|
+|computing_out_din           |  out|    1|     ap_fifo|                          computing_out|       pointer|
+|computing_out_full_n        |   in|    1|     ap_fifo|                          computing_out|       pointer|
+|computing_out_write         |  out|    1|     ap_fifo|                          computing_out|       pointer|
+|emitting_offset_out_din     |  out|    1|     ap_fifo|                    emitting_offset_out|       pointer|
+|emitting_offset_out_full_n  |   in|    1|     ap_fifo|                    emitting_offset_out|       pointer|
+|emitting_offset_out_write   |  out|    1|     ap_fifo|                    emitting_offset_out|       pointer|
+|previous_rows_out_din       |  out|   16|     ap_fifo|                      previous_rows_out|       pointer|
+|previous_rows_out_full_n    |   in|    1|     ap_fifo|                      previous_rows_out|       pointer|
+|previous_rows_out_write     |  out|    1|     ap_fifo|                      previous_rows_out|       pointer|
++----------------------------+-----+-----+------------+---------------------------------------+--------------+
+

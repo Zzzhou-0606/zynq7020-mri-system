@@ -1,0 +1,30 @@
+{
+  "session_id": "OAS1_0179_MR1",
+  "record_index": 72,
+  "source": "saved frozen development40 predictions; no new inference",
+  "clinical_cdr": 0.5,
+  "clinical_class_id": 1,
+  "probability_positive": 0.9315616631507874,
+  "score": 93.15616631507874,
+  "severity_probability": 0.8689703345298767,
+  "severity_status": "complete",
+  "class_id": 2,
+  "class_labels": {
+    "0": "CDR=0",
+    "1": "CDR=0.5",
+    "2": "CDR>=1"
+  },
+  "hippocampus_left_mm3": 2259.0,
+  "hippocampus_right_mm3": 2278.0,
+  "anatomical_volumes_mm3": {
+    "log_left_hippocampus_mm3": 2259.0,
+    "log_right_hippocampus_mm3": 2278.0,
+    "log_left_entorhinal_mm3": 599.0,
+    "log_right_entorhinal_mm3": 456.0,
+    "log_left_inferiortemporal_mm3": 5158.0,
+    "log_right_inferiortemporal_mm3": 5312.0,
+    "log_bilateral_lateral_ventricles_including_inferior_horns_mm3": 44431.0,
+    "log_total_parenchyma_mm3": 753396.0
+  },
+  "segmentation_source": "existing FastSurfer output; not newly inferred or expert validated"
+}

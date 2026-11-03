@@ -1,0 +1,338 @@
+{
+  "format": "MRIMQV2",
+  "abi": 2,
+  "precision": "int16",
+  "roundtrip_exact": true,
+  "model_version": "system-frozen-20261022-v1",
+  "quantization_version": "frozen-int16-20261024-v2",
+  "bytes": 22580928,
+  "epochs": {
+    "a": 169,
+    "b": 12,
+    "c": 6,
+    "s": 2
+  },
+  "rounding": "symmetric nearest ties away from zero",
+  "activation": "signed16",
+  "weights": "signed16 per output channel power of two",
+  "accumulator": "signed64",
+  "bn_folded": true,
+  "sum_output_divisors": {
+    "a": 16,
+    "r": 49
+  },
+  "layers": [
+    {
+      "name": "a.features.0",
+      "shape": [
+        16,
+        1,
+        3,
+        3
+      ],
+      "input_exp": 14,
+      "output_exp": 14,
+      "residual_shift": 0,
+      "max_accumulator": 5159056048
+    },
+    {
+      "name": "a.features.3",
+      "shape": [
+        32,
+        16,
+        3,
+        3
+      ],
+      "input_exp": 14,
+      "output_exp": 13,
+      "residual_shift": 0,
+      "max_accumulator": 39491066472
+    },
+    {
+      "name": "a.features.6",
+      "shape": [
+        64,
+        32,
+        3,
+        3
+      ],
+      "input_exp": 13,
+      "output_exp": 11,
+      "residual_shift": 0,
+      "max_accumulator": 79666616344
+    },
+    {
+      "name": "a.features.9",
+      "shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "input_exp": 11,
+      "output_exp": 9,
+      "residual_shift": 0,
+      "max_accumulator": 219257225124
+    },
+    {
+      "name": "r.conv1",
+      "shape": [
+        64,
+        3,
+        7,
+        7
+      ],
+      "input_exp": 13,
+      "output_exp": 13,
+      "residual_shift": 0,
+      "max_accumulator": 59857572864
+    },
+    {
+      "name": "r.layer1.0.conv1",
+      "shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "input_exp": 13,
+      "output_exp": 13,
+      "residual_shift": 0,
+      "max_accumulator": 101053054976
+    },
+    {
+      "name": "r.layer1.0.conv2",
+      "shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "input_exp": 13,
+      "output_exp": 12,
+      "residual_shift": 1,
+      "max_accumulator": 132662098016
+    },
+    {
+      "name": "r.layer1.1.conv1",
+      "shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "input_exp": 12,
+      "output_exp": 13,
+      "residual_shift": 0,
+      "max_accumulator": 112422032192
+    },
+    {
+      "name": "r.layer1.1.conv2",
+      "shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "input_exp": 13,
+      "output_exp": 12,
+      "residual_shift": 0,
+      "max_accumulator": 132591462880
+    },
+    {
+      "name": "r.layer2.0.conv1",
+      "shape": [
+        128,
+        64,
+        3,
+        3
+      ],
+      "input_exp": 12,
+      "output_exp": 13,
+      "residual_shift": 0,
+      "max_accumulator": 114964109552
+    },
+    {
+      "name": "r.layer2.0.conv2",
+      "shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "input_exp": 13,
+      "output_exp": 12,
+      "residual_shift": 0,
+      "max_accumulator": 204929038848
+    },
+    {
+      "name": "r.layer2.0.downsample.0",
+      "shape": [
+        128,
+        64,
+        1,
+        1
+      ],
+      "input_exp": 12,
+      "output_exp": 12,
+      "residual_shift": 0,
+      "max_accumulator": 22647349272
+    },
+    {
+      "name": "r.layer2.1.conv1",
+      "shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "input_exp": 12,
+      "output_exp": 13,
+      "residual_shift": 0,
+      "max_accumulator": 235318358848
+    },
+    {
+      "name": "r.layer2.1.conv2",
+      "shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "input_exp": 13,
+      "output_exp": 12,
+      "residual_shift": 0,
+      "max_accumulator": 259191456464
+    },
+    {
+      "name": "r.layer3.0.conv1",
+      "shape": [
+        256,
+        128,
+        3,
+        3
+      ],
+      "input_exp": 12,
+      "output_exp": 13,
+      "residual_shift": 0,
+      "max_accumulator": 247444505440
+    },
+    {
+      "name": "r.layer3.0.conv2",
+      "shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "input_exp": 13,
+      "output_exp": 12,
+      "residual_shift": 0,
+      "max_accumulator": 393051156096
+    },
+    {
+      "name": "r.layer3.0.downsample.0",
+      "shape": [
+        256,
+        128,
+        1,
+        1
+      ],
+      "input_exp": 12,
+      "output_exp": 12,
+      "residual_shift": 0,
+      "max_accumulator": 40876230342
+    },
+    {
+      "name": "r.layer3.1.conv1",
+      "shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "input_exp": 12,
+      "output_exp": 13,
+      "residual_shift": 0,
+      "max_accumulator": 442322622848
+    },
+    {
+      "name": "r.layer3.1.conv2",
+      "shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "input_exp": 13,
+      "output_exp": 12,
+      "residual_shift": 0,
+      "max_accumulator": 520324557040
+    },
+    {
+      "name": "r.layer4.0.conv1",
+      "shape": [
+        512,
+        256,
+        3,
+        3
+      ],
+      "input_exp": 12,
+      "output_exp": 13,
+      "residual_shift": 0,
+      "max_accumulator": 531202996072
+    },
+    {
+      "name": "r.layer4.0.conv2",
+      "shape": [
+        512,
+        512,
+        3,
+        3
+      ],
+      "input_exp": 13,
+      "output_exp": 12,
+      "residual_shift": 0,
+      "max_accumulator": 865462923776
+    },
+    {
+      "name": "r.layer4.0.downsample.0",
+      "shape": [
+        512,
+        256,
+        1,
+        1
+      ],
+      "input_exp": 12,
+      "output_exp": 12,
+      "residual_shift": 0,
+      "max_accumulator": 74443302240
+    },
+    {
+      "name": "r.layer4.1.conv1",
+      "shape": [
+        512,
+        512,
+        3,
+        3
+      ],
+      "input_exp": 12,
+      "output_exp": 13,
+      "residual_shift": 0,
+      "max_accumulator": 1026176174464
+    },
+    {
+      "name": "r.layer4.1.conv2",
+      "shape": [
+        512,
+        512,
+        3,
+        3
+      ],
+      "input_exp": 13,
+      "output_exp": 10,
+      "residual_shift": 2,
+      "max_accumulator": 892401411344
+    }
+  ]
+}
